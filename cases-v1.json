@@ -1,0 +1,761 @@
+{
+  "$comment": "Synthetic continued-stay authorization case packets. Payer context: Utah Medicaid FFS, ASAM Level 3.5 residential SUD treatment, adult members (21-64). Facsimile clinical documentation calibrated to Utah Medicaid documentation requirements. NOT clinically validated. See README.",
+  "schema_version": "1.0",
+  "payer": "Utah Medicaid (Fee-for-Service), Division of Integrated Healthcare",
+  "cases": [
+    {
+      "case_id": "CSA-001",
+      "episode": {
+        "member_id": "UT-449213",
+        "member_age": 34,
+        "asam_level_requested": "3.5",
+        "intake_date": "2026-06-08",
+        "days_elapsed_at_request": 28,
+        "first_requested_dos": "2026-07-06",
+        "days_requested": 14,
+        "submission_date": "2026-07-03",
+        "last_reassessment_date": "2026-07-05",
+        "prior_reassessment_date": "2026-06-21",
+        "prescriber": {
+          "name": "M. Reyes",
+          "credential": "LCSW",
+          "license_number": "UT-7741082"
+        },
+        "facility": {
+          "name": "Diamond Recovery Center",
+          "licensed_r501_19": true,
+          "bed_count": 24,
+          "is_imd": true,
+          "accreditation": "CARF"
+        }
+      },
+      "treatment_plan": {
+        "signed_by": "M. Reyes, LCSW",
+        "signature_date": "2026-06-09",
+        "projected_schedule": "Individual therapy 2x/week, group psychotherapy 5x/week, psychosocial rehabilitative services daily, pharmacologic management weekly. Anticipated duration 45 days.",
+        "goals": [
+          {
+            "goal_id": "G1",
+            "date_added": "2026-06-09",
+            "text": "Member will reduce self-reported craving intensity from 8/10 to 4/10 or below, measured weekly."
+          },
+          {
+            "goal_id": "G2",
+            "date_added": "2026-06-09",
+            "text": "Member will identify and rehearse three relapse-prevention strategies applicable to unsupervised settings."
+          },
+          {
+            "goal_id": "G3",
+            "date_added": "2026-06-23",
+            "text": "Member will complete housing application through case management and secure sober-living placement prior to discharge."
+          }
+        ]
+      },
+      "progress_notes": [
+        {
+          "date": "2026-06-24",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Member engaged throughout session. Addressed G1. Reported craving intensity at 6/10 this week, down from 7/10 last week, attributing the shift to consistent group attendance and improved sleep. Addressed G2. Member articulated two strategies without prompting, urge surfing and calling a designated peer, but was unable to generate a third and grew visibly frustrated. Member disclosed that his partner continues to use methamphetamine daily and has contacted him twice this week asking when he is coming home. Member stated he does not know how he would refuse if he were physically present in that apartment. Discussed this as a primary discharge risk.",
+          "signature": "M. Reyes, LCSW"
+        },
+        {
+          "date": "2026-06-28",
+          "start_time": "13:30",
+          "stop_time": "14:15",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1 and G2. Craving intensity reported at 6/10, unchanged from prior session. Member generated a third relapse-prevention strategy this session, removing himself physically from the environment and going to a scheduled meeting, which represents progress on G2. When asked to rehearse applying it to his own apartment, member could not describe where he would go, noting he has no other housing and no family in state. Addressed G3. Member completed the initial housing application with case management on 6/26. No placement identified yet. Member expressed motivation but described the housing question as the thing he thinks about at night.",
+          "signature": "M. Reyes, LCSW"
+        },
+        {
+          "date": "2026-07-01",
+          "start_time": "09:00",
+          "stop_time": "10:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Group psychotherapy (90853)",
+          "note": "Member attended relapse-prevention group. Addressed G2. Member volunteered his own scenario for group problem-solving, describing the apartment and his partner's active use, and accepted feedback from three peers without defensiveness. This is the first time member has brought personal material to group. Craving intensity reported at 5/10. Member remains without identified sober-living placement. Co-facilitator present: J. Okonkwo, ASUDC.",
+          "signature": "T. Bramlett, LCMHC"
+        },
+        {
+          "date": "2026-07-04",
+          "start_time": "11:00",
+          "stop_time": "11:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1, G2, G3. Craving intensity reported at 5/10, sustained from prior session and down from 8/10 at intake. Member rehearsed all three relapse-prevention strategies and applied them to two hypothetical scenarios with adequate specificity. Progress on G2 is meaningful. G3 remains open. Case management reports two sober-living facilities contacted, one waitlist, one pending intake interview scheduled 7/09. Member reiterated he has no alternative to returning to the apartment with his partner if placement does not materialize. Member asked directly whether he could stay until housing is settled.",
+          "signature": "M. Reyes, LCSW"
+        }
+      ],
+      "reassessment": {
+        "date": "2026-07-05",
+        "performed_by": "M. Reyes, LCSW",
+        "service": "Psychiatric diagnostic evaluation, reassessment (90791)",
+        "progress_toward_goals": "G1: measurable progress. Craving intensity reduced from 8/10 at intake to 5/10, sustained across two weeks. G2: goal substantially met. Member has articulated and rehearsed three strategies and applied them to scenario work. G3: not met. Sober-living placement not secured. One intake interview pending 7/09.",
+        "appropriateness_of_services": "Current service mix remains appropriate. Group psychotherapy has become productive for this member in the last two weeks following a period of non-participation. Individual therapy continues to be the setting where discharge-environment planning occurs. No change to regimen recommended at this time.",
+        "medical_necessity_of_continued_services": "Member's Dimension 6 remains high acuity. The only confirmed discharge destination is a residence with an actively using partner and no sober support. Member has stated directly he does not believe he could refuse use in that setting. Dimension 5 relapse potential is correspondingly elevated notwithstanding clinical gains. A step-down to 2.5 or 2.1 would return member nightly to the same unsafe environment that constitutes the primary risk, and would not be equally effective. Continued 3.5 requested for 14 days to permit sober-living placement to complete.",
+        "asam_dimensions": {
+          "d1_withdrawal": "Resolved. No withdrawal symptoms since day 6.",
+          "d2_biomedical": "Stable. Hypertension managed, medication adherent.",
+          "d3_emotional_behavioral": "Moderate. Anxiety present, no SI/HI, no psychotic features.",
+          "d4_readiness": "Low acuity. Member is voluntarily engaged and requesting continued treatment.",
+          "d5_relapse_potential": "High. Cravings reduced but present. Untested in unsupervised setting.",
+          "d6_recovery_environment": "High. No sober housing. Confirmed discharge address contains an active user."
+        }
+      }
+    },
+    {
+      "case_id": "CSA-002",
+      "episode": {
+        "member_id": "UT-451877",
+        "member_age": 41,
+        "asam_level_requested": "3.5",
+        "intake_date": "2026-06-05",
+        "days_elapsed_at_request": 30,
+        "first_requested_dos": "2026-07-05",
+        "days_requested": 14,
+        "submission_date": "2026-07-02",
+        "last_reassessment_date": "2026-07-04",
+        "prior_reassessment_date": "2026-06-20",
+        "prescriber": {
+          "name": "D. Whitcomb",
+          "credential": "LMFT",
+          "license_number": "UT-6620914"
+        },
+        "facility": {
+          "name": "Diamond Recovery Center",
+          "licensed_r501_19": true,
+          "bed_count": 24,
+          "is_imd": true,
+          "accreditation": "CARF"
+        }
+      },
+      "treatment_plan": {
+        "signed_by": "D. Whitcomb, LMFT",
+        "signature_date": "2026-06-06",
+        "projected_schedule": "Individual therapy 2x/week, group psychotherapy 5x/week, family psychotherapy 1x/week, pharmacologic management weekly. Anticipated duration 30 days.",
+        "goals": [
+          {
+            "goal_id": "G1",
+            "date_added": "2026-06-06",
+            "text": "Member will abstain from alcohol use and report craving intensity of 3/10 or below sustained across two consecutive weeks."
+          },
+          {
+            "goal_id": "G2",
+            "date_added": "2026-06-06",
+            "text": "Member will establish a written relapse-prevention plan including at least four coping strategies and three named supports."
+          },
+          {
+            "goal_id": "G3",
+            "date_added": "2026-06-06",
+            "text": "Member and spouse will complete six family psychotherapy sessions addressing communication around recovery."
+          }
+        ]
+      },
+      "progress_notes": [
+        {
+          "date": "2026-06-23",
+          "start_time": "14:00",
+          "stop_time": "14:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1 and G2. Member reported craving intensity at 3/10, down from 7/10 at intake. Denied any use. Member produced a draft written relapse-prevention plan containing five coping strategies and three named supports: spouse, sponsor, and a coworker who is nine years sober. Plan is specific and includes trigger identification for work stress and for social events involving alcohol. Member was able to describe how he would leave a work function if alcohol were present, including who he would call from the parking lot.",
+          "signature": "D. Whitcomb, LMFT"
+        },
+        {
+          "date": "2026-06-27",
+          "start_time": "10:00",
+          "stop_time": "11:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Family psychotherapy with patient present (90847)",
+          "note": "Fifth family session. Spouse present. Addressed G3. Couple practiced a structured check-in protocol they had rehearsed between sessions and reported using it twice during spouse's visits. Spouse described her own attendance at Al-Anon, now weekly for four weeks. Spouse confirmed the home has been alcohol-free since member's admission and that she has removed alcohol permanently. Member and spouse identified a plan for the first thirty days post-discharge including nightly check-ins and three weekly meetings for member.",
+          "signature": "D. Whitcomb, LMFT"
+        },
+        {
+          "date": "2026-06-30",
+          "start_time": "09:00",
+          "stop_time": "10:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Group psychotherapy (90853)",
+          "note": "Member attended relapse-prevention group and served as an informal support to two newer members. Addressed G2. Member described his written plan to the group and fielded questions with clarity. Craving intensity reported at 2/10. Member noted that his employer has confirmed his position is held and that he is scheduled to return to work on a graduated basis. Member expressed some impatience with the residential setting, stating he feels ready to practice these skills in the world rather than rehearse them.",
+          "signature": "T. Bramlett, LCMHC"
+        },
+        {
+          "date": "2026-07-03",
+          "start_time": "14:00",
+          "stop_time": "14:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1, G2, G3. Craving intensity reported at 2/10, sustained third consecutive week at 3/10 or below. No use. Written relapse-prevention plan finalized and reviewed. Sixth family session completed 7/01. Member has confirmed housing with spouse in an alcohol-free home, confirmed employment, confirmed sponsor contact three times weekly, and has scheduled an IOP intake for 7/08. Member reports sleeping well, no acute anxiety, and describes his motivation as steady rather than fragile. Member again raised readiness for discharge.",
+          "signature": "D. Whitcomb, LMFT"
+        }
+      ],
+      "reassessment": {
+        "date": "2026-07-04",
+        "performed_by": "D. Whitcomb, LMFT",
+        "service": "Psychiatric diagnostic evaluation, reassessment (90791)",
+        "progress_toward_goals": "G1: met. Craving intensity at or below 3/10 across three consecutive weeks, currently 2/10. No use throughout episode. G2: met. Written plan finalized with five strategies and three named supports, rehearsed in individual and group settings. G3: met. Six family sessions completed with spouse; spouse engaged in Al-Anon independently.",
+        "appropriateness_of_services": "All treatment plan goals have been met. Current 3.5 service intensity exceeds what member's presentation now requires. Member is requesting increased autonomy and has expressed that continued residential rehearsal is not productive for him.",
+        "medical_necessity_of_continued_services": "Requesting 14 additional days at 3.5 to consolidate gains and reduce risk of early relapse following a rapid course of improvement.",
+        "asam_dimensions": {
+          "d1_withdrawal": "Resolved. No withdrawal symptoms since day 4.",
+          "d2_biomedical": "Stable. No active medical issues.",
+          "d3_emotional_behavioral": "Low. Mood euthymic, sleep restored, no SI/HI.",
+          "d4_readiness": "Low acuity. Member actively engaged and self-directed.",
+          "d5_relapse_potential": "Low to moderate. Cravings minimal, plan established and rehearsed, sponsor engaged.",
+          "d6_recovery_environment": "Low. Alcohol-free home confirmed, spouse in Al-Anon, employment held, IOP intake scheduled 7/08."
+        }
+      }
+    },
+    {
+      "case_id": "CSA-003",
+      "episode": {
+        "member_id": "UT-446302",
+        "member_age": 29,
+        "asam_level_requested": "3.5",
+        "intake_date": "2026-06-12",
+        "days_elapsed_at_request": 26,
+        "first_requested_dos": "2026-07-08",
+        "days_requested": 14,
+        "submission_date": "2026-07-05",
+        "last_reassessment_date": "2026-07-07",
+        "prior_reassessment_date": "2026-06-23",
+        "prescriber": {
+          "name": "R. Halvorsen",
+          "credential": "LCSW",
+          "license_number": "UT-7203355"
+        },
+        "facility": {
+          "name": "Diamond Recovery Center",
+          "licensed_r501_19": true,
+          "bed_count": 24,
+          "is_imd": true,
+          "accreditation": "CARF"
+        }
+      },
+      "treatment_plan": {
+        "signed_by": "R. Halvorsen, LCSW",
+        "signature_date": "2026-06-13",
+        "projected_schedule": "Individual therapy 2x/week, group psychotherapy 5x/week, psychosocial rehabilitative services daily. Anticipated duration 45 days.",
+        "goals": [
+          {
+            "goal_id": "G1",
+            "date_added": "2026-06-13",
+            "text": "Member will attend all scheduled group sessions and participate verbally in at least two per week."
+          },
+          {
+            "goal_id": "G2",
+            "date_added": "2026-06-13",
+            "text": "Member will identify personal relapse triggers and document them in a written inventory."
+          },
+          {
+            "goal_id": "G3",
+            "date_added": "2026-06-13",
+            "text": "Member will re-establish contact with at least one supportive family member."
+          }
+        ]
+      },
+      "progress_notes": [
+        {
+          "date": "2026-06-25",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Member attended session. Discussed treatment goals. Member was quiet. Session focused on coping skills. Member will continue with current plan.",
+          "signature": "R. Halvorsen, LCSW"
+        },
+        {
+          "date": "2026-06-29",
+          "start_time": "09:00",
+          "stop_time": "10:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Group psychotherapy (90853)",
+          "note": "Member attended group. Topic was relapse prevention. Member listened. No behavioral concerns.",
+          "signature": "T. Bramlett, LCMHC"
+        },
+        {
+          "date": "2026-07-02",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Member attended session. Continued work on treatment goals. Member reports doing okay. Discussed discharge planning generally. Will continue to monitor.",
+          "signature": "R. Halvorsen, LCSW"
+        },
+        {
+          "date": "2026-07-06",
+          "start_time": "13:00",
+          "stop_time": "13:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Member attended session. Member remains engaged in the program. Reviewed coping strategies. No new issues reported. Member will continue with current treatment plan.",
+          "signature": "R. Halvorsen, LCSW"
+        }
+      ],
+      "reassessment": {
+        "date": "2026-07-07",
+        "performed_by": "R. Halvorsen, LCSW",
+        "service": "Psychiatric diagnostic evaluation, reassessment (90791)",
+        "progress_toward_goals": "Member continues to work on treatment goals. Progress is ongoing.",
+        "appropriateness_of_services": "Current services remain appropriate.",
+        "medical_necessity_of_continued_services": "Member continues to require residential treatment at this time. Requesting 14 additional days.",
+        "asam_dimensions": {
+          "d1_withdrawal": "Resolved.",
+          "d2_biomedical": "Stable.",
+          "d3_emotional_behavioral": "Moderate.",
+          "d4_readiness": "Moderate.",
+          "d5_relapse_potential": "High.",
+          "d6_recovery_environment": "High."
+        }
+      }
+    },
+    {
+      "case_id": "CSA-004",
+      "episode": {
+        "member_id": "UT-448190",
+        "member_age": 37,
+        "asam_level_requested": "3.5",
+        "intake_date": "2026-06-03",
+        "days_elapsed_at_request": 32,
+        "first_requested_dos": "2026-07-05",
+        "days_requested": 14,
+        "submission_date": "2026-07-02",
+        "last_reassessment_date": "2026-07-04",
+        "prior_reassessment_date": "2026-06-20",
+        "prescriber": {
+          "name": "A. Ferrante",
+          "credential": "LCMHC",
+          "license_number": "UT-7108846"
+        },
+        "facility": {
+          "name": "Diamond Recovery Center",
+          "licensed_r501_19": true,
+          "bed_count": 24,
+          "is_imd": true,
+          "accreditation": "CARF"
+        }
+      },
+      "treatment_plan": {
+        "signed_by": "A. Ferrante, LCMHC",
+        "signature_date": "2026-06-04",
+        "projected_schedule": "Individual therapy 2x/week, group psychotherapy 5x/week, psychosocial rehabilitative services daily, pharmacologic management weekly. Anticipated duration 45 days.",
+        "goals": [
+          {
+            "goal_id": "G1",
+            "date_added": "2026-06-04",
+            "text": "Member will reduce opioid craving intensity from 9/10 to 5/10 or below, measured weekly."
+          },
+          {
+            "goal_id": "G2",
+            "date_added": "2026-06-04",
+            "text": "Member will attend and participate in daily group psychotherapy, defined as at least one verbal contribution per session."
+          },
+          {
+            "goal_id": "G3",
+            "date_added": "2026-06-18",
+            "text": "Member will develop a written safety plan for the first fourteen days post-discharge including housing, transportation, and daily structure."
+          }
+        ]
+      },
+      "progress_notes": [
+        {
+          "date": "2026-06-24",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1 and G2. Craving intensity reported at 5/10, down from 9/10 at intake and sustained for eight days. Member participated in all groups this week and contributed verbally in each. Addressed G3. Member began drafting a post-discharge safety plan and identified transportation as the unresolved element.",
+          "signature": "A. Ferrante, LCMHC"
+        },
+        {
+          "date": "2026-06-28",
+          "start_time": "11:00",
+          "stop_time": "12:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy for crisis (90839)",
+          "note": "Member was notified on 6/26 that his mother died of a cardiac event. Member was very close to his mother, who had been his primary supportive contact and had agreed to house him post-discharge. Session addressed acute grief. Member tearful throughout, denied SI and HI when asked directly. Member reported craving intensity spiked to 8/10 in the twenty-four hours following notification. Member stated he wanted to use and did not, and asked staff to sit with him overnight, which staff did. Member has not attended group since 6/26 and declined to attend today, stating he cannot talk in front of people right now. Mental status: alert, oriented, grief-congruent affect, no psychosis. Disposition: continue at current level, increase individual contact to daily, hold group participation expectation temporarily.",
+          "signature": "A. Ferrante, LCMHC"
+        },
+        {
+          "date": "2026-07-01",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1 and G2. No reportable progress this period. Craving intensity remains at 7/10, elevated from 5/10 prior to 6/26. Member has not attended group since his mother's death on 6/26 and has not met the G2 participation criterion. Barrier: acute bereavement. Member's mother was both his closest attachment and his confirmed post-discharge housing. Member is now without a discharge destination. Member is attending individual sessions daily and has not used. Member stated today that staying here is the only reason he has not used, which is clinically consistent with his presentation.",
+          "signature": "A. Ferrante, LCMHC"
+        },
+        {
+          "date": "2026-07-03",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1, G2, G3. No reportable progress on G1 or G2. Craving intensity 7/10, unchanged. Member attended the first fifteen minutes of group on 7/02 and left; this is his first group attendance since 6/26 and is noted as an early sign of re-engagement rather than as goal attainment. Barrier remains acute bereavement, now eight days from notification. G3 has regressed: the housing arrangement documented on 6/18 is void. Case management has opened a sober-living referral, no placement identified. Member denies SI. Member asked what happens to him if the insurance stops paying.",
+          "signature": "A. Ferrante, LCMHC"
+        }
+      ],
+      "reassessment": {
+        "date": "2026-07-04",
+        "performed_by": "A. Ferrante, LCMHC",
+        "service": "Psychiatric diagnostic evaluation, reassessment (90791)",
+        "progress_toward_goals": "G1: no reportable progress this review period. Craving intensity rose from 5/10 to 8/10 following member's mother's death on 6/26 and has settled at 7/10. Barrier documented: acute bereavement. G2: not met this review period. Member did not attend group between 6/26 and 7/02 and attended partially on 7/02. Barrier documented: acute bereavement, member unable to tolerate group setting. G3: regressed. The confirmed post-discharge housing arrangement was the deceased's residence and is no longer available.",
+        "appropriateness_of_services": "Regimen adjusted appropriately in response to the event. Individual contact increased to daily on 6/28, group participation expectation temporarily suspended, crisis service delivered 6/28. Recommend continuing daily individual contact and resuming graduated group participation as tolerated. No change in level of care indicated.",
+        "medical_necessity_of_continued_services": "Member experienced an acute bereavement event in the third week of treatment that simultaneously elevated Dimension 5 and destroyed his Dimension 6 discharge plan. Craving intensity nearly doubled and remains above the pre-event baseline. Member has verbalized intent to use and refrained, in a setting with 24-hour structure. He now has no identified discharge destination. A step-down at this juncture would remove the structure during the highest-risk interval of the episode and would return an actively grieving member with 7/10 cravings to no confirmed housing. No more conservative level of care would be equally effective. Continued 3.5 requested for 14 days.",
+        "asam_dimensions": {
+          "d1_withdrawal": "Resolved. No withdrawal symptoms since day 9.",
+          "d2_biomedical": "Stable. No acute issues.",
+          "d3_emotional_behavioral": "High. Acute grief reaction, sleep disruption, tearfulness. No SI/HI, no psychosis.",
+          "d4_readiness": "Low acuity. Member remains voluntarily engaged and is requesting continued treatment.",
+          "d5_relapse_potential": "High. Craving intensity 7/10, elevated from 5/10 pre-event. Verbalized urge to use on 6/26.",
+          "d6_recovery_environment": "High. Prior housing plan void following the death of the member's mother. No placement identified."
+        }
+      }
+    },
+    {
+      "case_id": "CSA-005",
+      "episode": {
+        "member_id": "UT-443021",
+        "member_age": 45,
+        "asam_level_requested": "3.5",
+        "intake_date": "2026-05-16",
+        "days_elapsed_at_request": 52,
+        "first_requested_dos": "2026-07-07",
+        "days_requested": 14,
+        "submission_date": "2026-06-29",
+        "last_reassessment_date": "2026-07-06",
+        "prior_reassessment_date": "2026-06-22",
+        "prescriber": {
+          "name": "M. Reyes",
+          "credential": "LCSW",
+          "license_number": "UT-7741082"
+        },
+        "facility": {
+          "name": "Diamond Recovery Center",
+          "licensed_r501_19": true,
+          "bed_count": 24,
+          "is_imd": true,
+          "accreditation": "CARF"
+        }
+      },
+      "treatment_plan": {
+        "signed_by": "M. Reyes, LCSW",
+        "signature_date": "2026-05-17",
+        "projected_schedule": "Individual therapy 2x/week, group psychotherapy 5x/week, psychosocial rehabilitative services daily, pharmacologic management 2x/week. Anticipated duration 60 days.",
+        "goals": [
+          {
+            "goal_id": "G1",
+            "date_added": "2026-05-17",
+            "text": "Member will achieve and sustain craving intensity at 4/10 or below for two consecutive weeks."
+          },
+          {
+            "goal_id": "G2",
+            "date_added": "2026-05-17",
+            "text": "Member will stabilize on buprenorphine with documented adherence and no missed doses across a four-week period."
+          },
+          {
+            "goal_id": "G3",
+            "date_added": "2026-06-05",
+            "text": "Member will secure sober-living placement and complete an IOP intake prior to discharge."
+          }
+        ]
+      },
+      "progress_notes": [
+        {
+          "date": "2026-06-25",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1 and G2. Craving intensity reported at 5/10, down from 10/10 at intake. Buprenorphine adherence complete, no missed doses in three weeks. Member described a difficult phone call with his brother in which he was told he is not welcome to return to the family home. Member processed this without escalation, which is a notable change from week two behavior. Addressed G3. Sober-living referral submitted 6/23.",
+          "signature": "M. Reyes, LCSW"
+        },
+        {
+          "date": "2026-06-29",
+          "start_time": "09:00",
+          "stop_time": "10:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Group psychotherapy (90853)",
+          "note": "Member attended and contributed. Addressed G2. Member described his experience of stabilizing on buprenorphine to two newer members, including the first two weeks of dose adjustment. Craving intensity reported at 4/10. Member remains without confirmed housing.",
+          "signature": "T. Bramlett, LCMHC"
+        },
+        {
+          "date": "2026-07-02",
+          "start_time": "14:00",
+          "stop_time": "14:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1, G2, G3. Craving intensity reported at 4/10, sustained ten days. Buprenorphine adherence complete, now four weeks with no missed doses, meeting G2. Sober-living facility responded 7/01 with a waitlist position and an estimated availability of 7/18. Member has no alternative housing; brother's residence is unavailable and member's prior residence was an encampment. Member and case management scheduled IOP intake for 7/21, contingent on housing.",
+          "signature": "M. Reyes, LCSW"
+        },
+        {
+          "date": "2026-07-05",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1, G2, G3. Craving intensity 4/10, sustained thirteen days, meeting G1. Buprenorphine adherence continues. Member is functioning well within the structure and has taken on a peer-mentor role informally. G3 open. Sober-living availability confirmed for 7/18. Member is aware of the date and has organized his discharge planning around it. Member has no housing prior to 7/18 and has stated that returning to unsheltered living would end his recovery.",
+          "signature": "M. Reyes, LCSW"
+        }
+      ],
+      "reassessment": {
+        "date": "2026-07-06",
+        "performed_by": "M. Reyes, LCSW",
+        "service": "Psychiatric diagnostic evaluation, reassessment (90791)",
+        "progress_toward_goals": "G1: met. Craving intensity at 4/10 sustained thirteen consecutive days, down from 10/10 at intake. G2: met. Buprenorphine adherence complete across four weeks with no missed doses. G3: partially met. Sober-living placement confirmed with availability 7/18. IOP intake scheduled 7/21.",
+        "appropriateness_of_services": "Current regimen has produced sustained gains across both clinical goals. Member is stable, adherent, and engaged. Service mix remains appropriate through the housing transition. Recommend maintaining current intensity until placement date, then step down to 2.1 with MAT continuity.",
+        "medical_necessity_of_continued_services": "Member has met both clinical goals but has a confirmed housing gap between the present date and 7/18. Dimension 6 remains high acuity solely on the basis of that gap: the alternative to continued residential placement is unsheltered living, in which buprenorphine adherence and IOP attendance are both improbable. Continued 3.5 requested for 14 days to bridge to confirmed sober-living placement on 7/18 and IOP intake on 7/21.",
+        "asam_dimensions": {
+          "d1_withdrawal": "Resolved. Stabilized on buprenorphine.",
+          "d2_biomedical": "Stable. Hepatitis C, untreated, followed by primary care. No acute issues.",
+          "d3_emotional_behavioral": "Low to moderate. Mood stable, no SI/HI.",
+          "d4_readiness": "Low acuity. Member highly engaged, functioning as informal peer mentor.",
+          "d5_relapse_potential": "Moderate. Cravings well controlled on MAT. Untested outside structure.",
+          "d6_recovery_environment": "High. No housing available until 7/18. Alternative is unsheltered."
+        }
+      }
+    },
+    {
+      "case_id": "CSA-006",
+      "episode": {
+        "member_id": "UT-450644",
+        "member_age": 31,
+        "asam_level_requested": "3.5",
+        "intake_date": "2026-06-07",
+        "days_elapsed_at_request": 30,
+        "first_requested_dos": "2026-07-07",
+        "days_requested": 14,
+        "submission_date": "2026-07-04",
+        "last_reassessment_date": "2026-07-06",
+        "prior_reassessment_date": "2026-06-22",
+        "prescriber": {
+          "name": "A. Ferrante",
+          "credential": "LCMHC",
+          "license_number": "UT-7108846"
+        },
+        "facility": {
+          "name": "Diamond Recovery Center",
+          "licensed_r501_19": true,
+          "bed_count": 24,
+          "is_imd": true,
+          "accreditation": "CARF"
+        }
+      },
+      "treatment_plan": {
+        "signed_by": "A. Ferrante, LCMHC",
+        "signature_date": "2026-06-08",
+        "projected_schedule": "Individual therapy 2x/week, group psychotherapy 5x/week, psychosocial rehabilitative services daily. Anticipated duration 45 days.",
+        "goals": [
+          {
+            "goal_id": "G1",
+            "date_added": "2026-06-08",
+            "text": "Member will reduce stimulant craving intensity from 8/10 to 4/10 or below, measured weekly."
+          },
+          {
+            "goal_id": "G2",
+            "date_added": "2026-06-08",
+            "text": "Member will identify three high-risk situations and articulate a specific avoidance or coping response for each."
+          },
+          {
+            "goal_id": "G3",
+            "date_added": "2026-06-22",
+            "text": "Member will confirm post-discharge housing and identify two sober supports available by phone."
+          }
+        ]
+      },
+      "progress_notes": [
+        {
+          "date": "2026-06-24",
+          "start_time": "10:00",
+          "stop_time": "10:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Member arrived on time and was appropriately groomed. We spent the early portion of the session revisiting the psychoeducational material on stimulant withdrawal timelines that was covered in group on Monday, which member found clarifying. Member reported that the week had been better overall, and when asked to quantify, described cravings as around a 5, though he noted this varies considerably by time of day and that evenings remain difficult. Member's sister visited Sunday and afterward member was withdrawn for approximately a day; member attributed this to a conversation about his son's custody arrangement rather than to substance-related content. Toward the end of session member mentioned in passing that he had been offered a ride home by a former roommate and had said yes before thinking about it, then declined the following day. We did not have time to explore this fully. Member agreed to bring it to Thursday's session.",
+          "signature": "A. Ferrante, LCMHC"
+        },
+        {
+          "date": "2026-06-28",
+          "start_time": "09:00",
+          "stop_time": "10:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Group psychotherapy (90853)",
+          "note": "Member attended and participated. Group topic was environmental triggers. Member volunteered that his living situation prior to admission involved multiple people who use and that he does not expect that to have changed, but stated he feels differently about it now than he did a month ago and believes he could hold his ground. Peer feedback challenged this and member became somewhat defensive before re-engaging. Facilitator note: member's stated confidence appears to exceed what his history would support, though he is not dismissive of feedback. Craving intensity not formally elicited in group.",
+          "signature": "T. Bramlett, LCMHC"
+        },
+        {
+          "date": "2026-07-01",
+          "start_time": "14:00",
+          "stop_time": "14:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G2. Member identified two high-risk situations with reasonable specificity: payday, and contact with his former roommate. He was unable to produce a third despite prompting. Coping responses articulated for both identified situations were general rather than specific; member said he would avoid the roommate but could not describe how, given that they share a phone plan and the roommate has a key to the apartment member intends to return to. Member reported cravings as improved. When asked for a number he said maybe a 4 but then said it depends. Collateral from sister received by voicemail today states she is worried he is minimizing and that he told her last week he was struggling more than he lets on. This has not yet been discussed with member.",
+          "signature": "A. Ferrante, LCMHC"
+        },
+        {
+          "date": "2026-07-05",
+          "start_time": "11:00",
+          "stop_time": "11:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1, G2, G3. Member reported cravings at 4/10 and stated he has felt steady this week. Raised sister's collateral with member; member acknowledged he had told her he was struggling and said he did not want staff to think he was going backward. Productive conversation about the difference between reporting and performing. Member subsequently revised his craving report upward, describing evenings as closer to 6. Addressed G3: member intends to return to his prior apartment, which he acknowledges houses at least one active user, and names his sister as a sober support. He could not name a second. Member's engagement in session is genuine and he tolerates challenge well, which is a meaningful change from week one.",
+          "signature": "A. Ferrante, LCMHC"
+        }
+      ],
+      "reassessment": {
+        "date": "2026-07-06",
+        "performed_by": "A. Ferrante, LCMHC",
+        "service": "Psychiatric diagnostic evaluation, reassessment (90791)",
+        "progress_toward_goals": "G1: partial progress. Craving intensity reported between 4/10 and 6/10 depending on time of day, down from 8/10 at intake, though member's self-report has been inconsistent across the period and was revised upward on 7/05 following discussion of collateral. G2: partially met. Two of three high-risk situations identified; coping responses remain general rather than actionable. G3: not met. Housing plan is a return to a residence with at least one active user. One sober support named of two required.",
+        "appropriateness_of_services": "Current regimen appropriate. Member's capacity to tolerate challenge and revise his own self-report improved materially during this period and is the most clinically significant development. Recommend continued individual focus on accuracy of self-monitoring and concrete specification of coping responses.",
+        "medical_necessity_of_continued_services": "Member has made real but incomplete progress. Craving intensity is reduced but variable and was under-reported until 7/05. Dimension 6 is unresolved: the intended discharge residence houses an active user and member has not identified an alternative. Coping responses are not yet specific enough to be operable in that environment. Continued 3.5 requested for 14 days to establish an alternative housing plan and to develop actionable coping specificity.",
+        "asam_dimensions": {
+          "d1_withdrawal": "Resolved. No withdrawal symptoms since day 11.",
+          "d2_biomedical": "Stable. No acute issues.",
+          "d3_emotional_behavioral": "Moderate. Some flattening post-visit, no SI/HI, no psychosis.",
+          "d4_readiness": "Moderate. Engaged, though self-report accuracy has been a limiting factor.",
+          "d5_relapse_potential": "Moderate to high. See note: group facilitator assessed confidence as exceeding history; individual clinician assessed relapse potential as moderate on 7/01 prior to collateral.",
+          "d6_recovery_environment": "High. Intended discharge residence houses at least one active user. One sober support identified."
+        }
+      }
+    },
+    {
+      "case_id": "CSA-007",
+      "episode": {
+        "member_id": "UT-452908",
+        "member_age": 16,
+        "asam_level_requested": "3.5",
+        "intake_date": "2026-06-10",
+        "days_elapsed_at_request": 28,
+        "first_requested_dos": "2026-07-08",
+        "days_requested": 45,
+        "submission_date": "2026-07-06",
+        "last_reassessment_date": "2026-07-07",
+        "prior_reassessment_date": "2026-06-23",
+        "prescriber": {
+          "name": "S. Okafor",
+          "credential": "LCSW",
+          "license_number": "UT-7455190"
+        },
+        "facility": {
+          "name": "Diamond Recovery Center",
+          "licensed_r501_19": true,
+          "bed_count": 24,
+          "is_imd": true,
+          "accreditation": "CARF"
+        }
+      },
+      "treatment_plan": {
+        "signed_by": "S. Okafor, LCSW",
+        "signature_date": "2026-06-11",
+        "projected_schedule": "Individual therapy 2x/week, group psychotherapy 5x/week, family psychotherapy 1x/week, psychosocial rehabilitative services daily, educational coordination weekly. Anticipated duration 75 days.",
+        "goals": [
+          {
+            "goal_id": "G1",
+            "date_added": "2026-06-11",
+            "text": "Member will maintain abstinence from cannabis and alcohol and report craving intensity of 4/10 or below sustained across two consecutive weeks."
+          },
+          {
+            "goal_id": "G2",
+            "date_added": "2026-06-11",
+            "text": "Member will attend all scheduled group sessions and contribute verbally in at least three per week."
+          },
+          {
+            "goal_id": "G3",
+            "date_added": "2026-06-11",
+            "text": "Member and guardian will complete eight family psychotherapy sessions addressing conflict escalation and supervision at home."
+          },
+          {
+            "goal_id": "G4",
+            "date_added": "2026-06-25",
+            "text": "Member will re-enroll in an accredited educational program and complete a transition plan with the school district prior to discharge."
+          }
+        ]
+      },
+      "progress_notes": [
+        {
+          "date": "2026-06-25",
+          "start_time": "15:00",
+          "stop_time": "15:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1 and G2. Member reported craving intensity at 5/10, down from 8/10 at intake. Denied use. Member has attended all scheduled groups this week and contributed verbally in four. Addressed emerging G4. Member expressed anxiety about returning to his prior high school, where he reports that his primary using peer group remains and where he was truant for most of the spring semester. Member asked whether a different school was possible. Referred to case management for district transfer options.",
+          "signature": "S. Okafor, LCSW"
+        },
+        {
+          "date": "2026-06-29",
+          "start_time": "16:00",
+          "stop_time": "17:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Family psychotherapy with patient present (90847)",
+          "note": "Sixth family session. Mother present, stepfather did not attend. Addressed G3. Practiced the de-escalation protocol introduced in session four. Mother reported using it once during a phone call and described the outcome as better than prior attempts. Mother disclosed she works overnight shifts four nights per week and that member is unsupervised during those hours. This has not previously been documented. Discussed supervision as a discharge planning issue. Mother is receptive and is exploring schedule changes with her employer, outcome unknown.",
+          "signature": "S. Okafor, LCSW"
+        },
+        {
+          "date": "2026-07-02",
+          "start_time": "10:00",
+          "stop_time": "11:00",
+          "duration_minutes": 60,
+          "setting": "Residential treatment facility, in person",
+          "service": "Group psychotherapy (90853)",
+          "note": "Member attended adolescent process group and contributed. Addressed G2. Group topic was peer refusal skills. Member role-played a refusal scenario involving a specific named friend and was able to complete it, though he noted afterward that doing it in the room felt different from doing it in a car. Facilitator agreed and framed this as accurate self-assessment rather than pessimism. Craving intensity reported at 4/10.",
+          "signature": "T. Bramlett, LCMHC"
+        },
+        {
+          "date": "2026-07-06",
+          "start_time": "15:00",
+          "stop_time": "15:45",
+          "duration_minutes": 45,
+          "setting": "Residential treatment facility, in person",
+          "service": "Psychotherapy with patient (90834)",
+          "note": "Addressed G1, G2, G3, G4. Craving intensity reported at 4/10, sustained twelve days. No use. Group attendance and participation criteria met each week this period. Seventh family session completed 7/05 with mother present. Addressed G4: case management confirmed the district will consider a transfer to an alternative program, decision expected mid-August. Member has no confirmed educational placement and no confirmed daytime structure for the interval between discharge and the start of the school year. Member stated he does well here because every hour is accounted for.",
+          "signature": "S. Okafor, LCSW"
+        }
+      ],
+      "reassessment": {
+        "date": "2026-07-07",
+        "performed_by": "S. Okafor, LCSW",
+        "service": "Psychiatric diagnostic evaluation, reassessment (90791)",
+        "progress_toward_goals": "G1: progressing. Craving intensity reduced from 8/10 at intake to 4/10, sustained twelve days. No use throughout episode. Two-week sustained criterion not yet met. G2: met this period. Attendance complete, verbal contribution criterion met each week. G3: progressing. Seven of eight family sessions completed. Stepfather has not attended. G4: not met. District transfer decision pending mid-August. No confirmed placement.",
+        "appropriateness_of_services": "Current regimen appropriate and producing measurable movement across three of four goals. Recommend continued family psychotherapy with an effort to engage stepfather, and continued case management involvement on educational placement. No change to level of care indicated.",
+        "medical_necessity_of_continued_services": "Member is progressing but has not yet met the sustained abstinence criterion and has two unresolved environmental factors documented this period: overnight unsupervised intervals four nights weekly, newly disclosed 6/29, and no confirmed educational placement or daytime structure before mid-August. Member's own assessment is that his stability depends on structure. Dimension 6 remains elevated on both counts. A step-down would return the member to unsupervised evenings and unstructured days during the interval in which his primary using peer group remains accessible. Continued 3.5 requested for 45 days to bridge to the district's transfer decision and the start of the academic year.",
+        "asam_dimensions": {
+          "d1_withdrawal": "Resolved. No withdrawal symptoms since day 5.",
+          "d2_biomedical": "Stable. Asthma, controller inhaler, adherent.",
+          "d3_emotional_behavioral": "Moderate. Anxiety regarding school return. No SI/HI, no psychosis.",
+          "d4_readiness": "Low acuity. Member engaged, accurate in self-assessment.",
+          "d5_relapse_potential": "Moderate. Cravings reduced and stable. Primary using peer group remains accessible at prior school.",
+          "d6_recovery_environment": "High. Unsupervised four nights weekly per guardian work schedule. No confirmed educational placement until mid-August."
+        }
+      }
+    }
+  ]
+}
