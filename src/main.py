@@ -171,7 +171,7 @@ async def index(request: Request):
                 ],
             }
         )
-    return templates.TemplateResponse("index.html", {"request": request, "cases": cases})
+    return templates.TemplateResponse(request, "index.html", {"cases": cases})
 
 
 @app.get("/case/{case_id}", response_class=HTMLResponse)
@@ -228,9 +228,9 @@ async def case_detail(request: Request, case_id: str):
             )
 
     return templates.TemplateResponse(
+        request,
         "result.html",
         {
-            "request": request,
             "case_id": case_id,
             "episode": ep,
             "decision": score.decision.value,
