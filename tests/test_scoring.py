@@ -11,7 +11,7 @@ from src.models import (
     GoalStatus,
     Severity,
 )
-from src.scoring import CONFIDENCE_FLOOR, score_case
+from src.scoring import CONFIDENCE_FLOOR, CONFLICTING_PENALTY, score_case
 
 
 def _gate_pass(gate_id: str = "age_eligibility") -> GateResult:
@@ -63,11 +63,12 @@ def _dim(
     dimension: str,
     acuity: Acuity,
     confidence: float = 0.9,
+    conflicting: bool = False,
 ) -> DimensionEvidence:
     return DimensionEvidence(
         dimension=dimension,
         acuity=acuity,
-        assertions=[_assertion(confidence=confidence)],
+        assertions=[_assertion(confidence=confidence, conflicting=conflicting)],
     )
 
 
@@ -106,6 +107,7 @@ class TestFatalGateDeny:
         )
         result = score_case("CSA-005", gates, evidence)
         assert result.decision == Decision.DENY
+        assert result.decision_confidence == 1.0
         assert result.has_fatal_gate is True
         assert result.credible_high_dimensions == []
 
@@ -151,6 +153,7 @@ class TestApprove:
         )
         result = score_case("CSA-001", gates, evidence)
         assert result.decision == Decision.APPROVE
+        assert result.decision_confidence > 0.9
         assert "d5_relapse_potential" in result.credible_high_dimensions
         assert "d6_recovery_environment" in result.credible_high_dimensions
 
@@ -325,3 +328,121 @@ class TestConfidenceFloor:
         )
         result = score_case("TEST", gates, evidence)
         assert result.decision != Decision.APPROVE
+
+
+# =====================================================================
+# Conflicting evidence penalty
+# =====================================================================
+
+
+class TestConflictingPenalty:
+    def test_csa006_pattern_conflicting_d5_drops_below_floor(self):
+        """CSA-006: D5 high at 0.91 raw but conflicting.
+        Effective = 0.91 * 0.6 = 0.546 → below floor.
+        D6 high at 0.95, clean → credible.
+        Should approve on D6 alone, but with lower confidence."""
+        gates = [_gate_pass()]
+        evidence = _evidence(
+            dims=[
+                _dim("d5_relapse_potential", Acuity.HIGH, 0.91, conflicting=True),
+                _dim("d6_recovery_environment", Acuity.HIGH, 0.95),
+            ],
+            goals=[
+                _goal("G1", GoalStatus.PARTIALLY_MET),
+                _goal("G2", GoalStatus.PARTIALLY_MET),
+                _goal("G3", GoalStatus.NOT_MET),
+            ],
+        )
+        result = score_case("CSA-006", gates, evidence)
+        assert result.decision == Decision.APPROVE
+        # D5 should NOT be in credible high — conflict dropped it
+        assert "d5_relapse_potential" not in result.credible_high_dimensions
+        # D6 carries the approval
+        assert "d6_recovery_environment" in result.credible_high_dimensions
+        # Confidence should be based only on D6, not inflated by D5
+        assert result.decision_confidence == 0.95
+
+    def test_conflicting_drops_rationale_explains(self):
+        """When conflict drops D5 below floor, rationale should explain."""
+        gates = [_gate_pass()]
+        evidence = _evidence(
+            dims=[
+                _dim("d5_relapse_potential", Acuity.HIGH, 0.91, conflicting=True),
+                _dim("d6_recovery_environment", Acuity.HIGH, 0.95),
+            ],
+            goals=[_goal("G1", GoalStatus.PARTIALLY_MET)],
+        )
+        result = score_case("TEST", gates, evidence)
+        assert any("conflicting" in r.lower() for r in result.rationale)
+
+    def test_all_high_dims_conflicting_no_approve(self):
+        """If every high-acuity dim is conflicting and drops below floor,
+        no credible high dims → no approve."""
+        gates = [_gate_pass()]
+        evidence = _evidence(
+            dims=[
+                _dim("d5_relapse_potential", Acuity.HIGH, 0.80, conflicting=True),
+                _dim("d6_recovery_environment", Acuity.HIGH, 0.80, conflicting=True),
+            ],
+            goals=[_goal("G1", GoalStatus.PARTIALLY_MET)],
+        )
+        # 0.80 * 0.6 = 0.48 → below floor for both
+        result = score_case("TEST", gates, evidence)
+        assert result.decision != Decision.APPROVE
+        assert result.credible_high_dimensions == []
+
+    def test_clean_evidence_not_penalized(self):
+        """Non-conflicting dimensions are unaffected by the penalty."""
+        gates = [_gate_pass()]
+        evidence = _evidence(
+            dims=[_dim("d5_relapse_potential", Acuity.HIGH, 0.90, conflicting=False)],
+            goals=[_goal("G1", GoalStatus.NOT_MET)],
+        )
+        result = score_case("TEST", gates, evidence)
+        assert result.decision == Decision.APPROVE
+        assert result.decision_confidence == 0.90
+
+    def test_conflicting_high_enough_still_approves(self):
+        """A conflicting dim with very high raw confidence can still clear."""
+        gates = [_gate_pass()]
+        # 1.0 * 0.6 = 0.6 → exactly at floor
+        evidence = _evidence(
+            dims=[_dim("d5_relapse_potential", Acuity.HIGH, 1.0, conflicting=True)],
+            goals=[_goal("G1", GoalStatus.NOT_MET)],
+        )
+        result = score_case("TEST", gates, evidence)
+        assert result.decision == Decision.APPROVE
+        assert result.decision_confidence == 0.6
+
+
+# =====================================================================
+# Decision confidence
+# =====================================================================
+
+
+class TestDecisionConfidence:
+    def test_fatal_deny_full_confidence(self):
+        gates = [_gate_fatal_fail()]
+        result = score_case("TEST", gates, None)
+        assert result.decision_confidence == 1.0
+
+    def test_clean_approve_high_confidence(self):
+        gates = [_gate_pass()]
+        evidence = _evidence(
+            dims=[_dim("d5_relapse_potential", Acuity.HIGH, 0.95)],
+            goals=[_goal("G1", GoalStatus.NOT_MET)],
+        )
+        result = score_case("TEST", gates, evidence)
+        assert result.decision_confidence == 0.95
+
+    def test_multiple_dims_averages_confidence(self):
+        gates = [_gate_pass()]
+        evidence = _evidence(
+            dims=[
+                _dim("d5_relapse_potential", Acuity.HIGH, 0.90),
+                _dim("d6_recovery_environment", Acuity.HIGH, 0.80),
+            ],
+            goals=[_goal("G1", GoalStatus.NOT_MET)],
+        )
+        result = score_case("TEST", gates, evidence)
+        assert result.decision_confidence == 0.85

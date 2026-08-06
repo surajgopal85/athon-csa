@@ -83,7 +83,7 @@
 
     <!-- Decision Banner -->
     <div class="banner {{ cls }}">
-        <div class="banner-decision">{{ decision | replace("_", " ") }}</div>
+        <div class="banner-decision">{{ decision | replace("_", " ") }} <span style="font-size: 1rem; font-weight: 400; opacity: 0.8;">({{ "%.0f" | format(decision_confidence * 100) }}% confidence)</span></div>
         <div class="banner-action">{{ next_action }}</div>
         <div class="banner-meta">
             {{ case_id }} &middot; Age {{ episode.member_age }} &middot;

@@ -165,6 +165,7 @@ async def index(request: Request):
                 "member_age": ep["member_age"],
                 "decision": score.decision.value,
                 "next_action": data["next_action"],
+                "decision_confidence": score.decision_confidence,
                 "has_fatal": score.has_fatal_gate,
                 "gate_failures": [
                     g for g in data["gate_results"] if not g.passed
@@ -234,6 +235,7 @@ async def case_detail(request: Request, case_id: str):
             "case_id": case_id,
             "episode": ep,
             "decision": score.decision.value,
+            "decision_confidence": score.decision_confidence,
             "next_action": data["next_action"],
             "has_fatal": score.has_fatal_gate,
             "gate_results": gate_results,

@@ -11,6 +11,25 @@ from src.models import (
 )
 
 CONFIDENCE_FLOOR = 0.6
+CONFLICTING_PENALTY = 0.6
+
+
+def _effective_confidence(dim) -> float:
+    """Compute effective confidence for a dimension.
+
+    Applies a penalty when any assertion in the dimension has
+    conflicting=True. Conflicting evidence shouldn't carry the
+    same weight as clean evidence.
+    """
+    if not dim.assertions:
+        return 0.0
+
+    avg = sum(a.confidence for a in dim.assertions) / len(dim.assertions)
+
+    if any(a.conflicting for a in dim.assertions):
+        avg *= CONFLICTING_PENALTY
+
+    return avg
 
 
 def score_case(
@@ -23,11 +42,15 @@ def score_case(
     Logic:
       1. Any fatal gate failed → DENY (skip clinical layer)
       2. Has credible high-acuity dimension → APPROVE
-         (acuity=high AND avg confidence >= 0.6)
+         (acuity=high AND effective confidence >= 0.6;
+          conflicting evidence is penalized)
       3. Has real documentation AND goal tracking → DENY_WITH_TRANSITION
-         (any dimension confidence >= 0.6, AND at least one goal
-          is not unable_to_assess)
       4. Otherwise → DENY
+
+    decision_confidence reflects how certain we are in the decision:
+      - 1.0 for fatal procedural denials (certain)
+      - Based on driving dimensions' effective confidence for approvals
+      - Reduced when conflicting or unquantified evidence is present
     """
     rationale: list[str] = []
 
@@ -44,6 +67,7 @@ def score_case(
         return ScoreResult(
             case_id=case_id,
             decision=Decision.DENY,
+            decision_confidence=1.0,
             procedural_results=gate_results,
             has_fatal_gate=True,
             credible_high_dimensions=[],
@@ -64,6 +88,7 @@ def score_case(
         return ScoreResult(
             case_id=case_id,
             decision=Decision.DENY,
+            decision_confidence=1.0,
             procedural_results=gate_results,
             has_fatal_gate=False,
             credible_high_dimensions=[],
@@ -72,30 +97,53 @@ def score_case(
 
     # Step 2: Find credible high-acuity dimensions
     credible_high: list[str] = []
+    credible_high_confidences: list[float] = []
     has_any_credible: bool = False
 
     for dim in evidence.dimensions:
         if not dim.assertions:
             continue
 
-        avg_confidence = (
-            sum(a.confidence for a in dim.assertions) / len(dim.assertions)
-        )
+        eff_conf = _effective_confidence(dim)
+        has_conflict = any(a.conflicting for a in dim.assertions)
+        has_unquant = any(a.unquantified for a in dim.assertions)
 
-        if avg_confidence >= CONFIDENCE_FLOOR:
+        if eff_conf >= CONFIDENCE_FLOOR:
             has_any_credible = True
 
-        if dim.acuity == Acuity.HIGH and avg_confidence >= CONFIDENCE_FLOOR:
+        if dim.acuity == Acuity.HIGH and eff_conf >= CONFIDENCE_FLOOR:
             credible_high.append(dim.dimension)
+            credible_high_confidences.append(eff_conf)
+
+            flags = []
+            if has_conflict:
+                flags.append("conflicting")
+            if has_unquant:
+                flags.append("unquantified")
+            flag_str = f" [{', '.join(flags)}]" if flags else ""
             rationale.append(
-                f"{dim.dimension}: high acuity, avg confidence {avg_confidence:.2f}"
+                f"{dim.dimension}: high acuity, "
+                f"effective confidence {eff_conf:.2f}{flag_str}"
+            )
+        elif dim.acuity == Acuity.HIGH and has_conflict:
+            raw_avg = (
+                sum(a.confidence for a in dim.assertions) / len(dim.assertions)
+            )
+            rationale.append(
+                f"{dim.dimension}: high acuity but conflicting evidence "
+                f"reduced effective confidence from {raw_avg:.2f} to "
+                f"{eff_conf:.2f} (below floor)"
             )
 
     # Step 2 decision: credible high-acuity dimensions exist → APPROVE
     if credible_high:
+        decision_conf = (
+            sum(credible_high_confidences) / len(credible_high_confidences)
+        )
         return ScoreResult(
             case_id=case_id,
             decision=Decision.APPROVE,
+            decision_confidence=round(decision_conf, 2),
             procedural_results=gate_results,
             has_fatal_gate=False,
             credible_high_dimensions=credible_high,
@@ -118,6 +166,7 @@ def score_case(
         return ScoreResult(
             case_id=case_id,
             decision=Decision.DENY_WITH_TRANSITION,
+            decision_confidence=0.7,
             procedural_results=gate_results,
             has_fatal_gate=False,
             credible_high_dimensions=[],
@@ -137,6 +186,7 @@ def score_case(
     return ScoreResult(
         case_id=case_id,
         decision=Decision.DENY,
+        decision_confidence=0.9,
         procedural_results=gate_results,
         has_fatal_gate=False,
         credible_high_dimensions=[],

@@ -36,7 +36,7 @@
         {% for case in cases %}
         {% set cls = "approve" if case.decision == "APPROVE" else ("deny-with-transition" if case.decision == "DENY_WITH_TRANSITION" else "deny") %}
         <a class="case-card {{ cls }}" href="/case/{{ case.case_id }}">
-            <span class="decision-badge {{ cls }}">{{ case.decision | replace("_", " ") }}</span>
+            <span class="decision-badge {{ cls }}">{{ case.decision | replace("_", " ") }} ({{ "%.0f" | format(case.decision_confidence * 100) }}%)</span>
             <div class="case-info">
                 <div class="case-header">
                     <span class="case-id">{{ case.case_id }}</span>

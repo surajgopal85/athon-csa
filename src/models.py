@@ -90,6 +90,7 @@ class Decision(str, Enum):
 class ScoreResult(BaseModel):
     case_id: str
     decision: Decision
+    decision_confidence: float
     procedural_results: list[GateResult]
     has_fatal_gate: bool
     credible_high_dimensions: list[str]
