@@ -35,6 +35,70 @@ class Facility(BaseModel):
     accreditation: str
 
 
+# --- Evidence models (extraction layer output) ---
+
+
+class Acuity(str, Enum):
+    LOW = "low"
+    MODERATE = "moderate"
+    HIGH = "high"
+
+
+class GoalStatus(str, Enum):
+    MET = "met"
+    PARTIALLY_MET = "partially_met"
+    NOT_MET = "not_met"
+    REGRESSED = "regressed"
+    UNABLE_TO_ASSESS = "unable_to_assess"
+
+
+class EvidenceAssertion(BaseModel):
+    assertion: str
+    source_text: str
+    confidence: float
+    conflicting: bool
+    unquantified: bool
+
+
+class DimensionEvidence(BaseModel):
+    dimension: str
+    acuity: Acuity
+    assertions: list[EvidenceAssertion]
+
+
+class GoalEvidence(BaseModel):
+    goal_id: str
+    status: GoalStatus
+    assertions: list[EvidenceAssertion]
+
+
+class ExtractedEvidence(BaseModel):
+    case_id: str
+    dimensions: list[DimensionEvidence]
+    goals: list[GoalEvidence]
+
+
+# --- Scoring models (clinical scoring output) ---
+
+
+class Decision(str, Enum):
+    APPROVE = "APPROVE"
+    DENY_WITH_TRANSITION = "DENY_WITH_TRANSITION"
+    DENY = "DENY"
+
+
+class ScoreResult(BaseModel):
+    case_id: str
+    decision: Decision
+    procedural_results: list[GateResult]
+    has_fatal_gate: bool
+    credible_high_dimensions: list[str]
+    rationale: list[str]
+
+
+# --- Episode model (procedural layer input) ---
+
+
 class Episode(BaseModel):
     member_id: str
     member_age: int
