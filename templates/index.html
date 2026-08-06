@@ -15,10 +15,12 @@
         .case-card.approve { border-left-color: #22863a; }
         .case-card.deny-with-transition { border-left-color: #dbab09; }
         .case-card.deny { border-left-color: #cb2431; }
+        .case-card.correct-resubmit { border-left-color: #e36209; }
         .decision-badge { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 4px; white-space: nowrap; min-width: 140px; text-align: center; }
         .decision-badge.approve { background: #dcffe4; color: #22863a; }
         .decision-badge.deny-with-transition { background: #fff5cc; color: #735c0f; }
         .decision-badge.deny { background: #ffdce0; color: #cb2431; }
+        .decision-badge.correct-resubmit { background: #fff0e0; color: #e36209; }
         .case-info { flex: 1; }
         .case-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.35rem; }
         .case-id { font-weight: 600; font-size: 1rem; }
@@ -34,7 +36,7 @@
 
     <div class="case-grid">
         {% for case in cases %}
-        {% set cls = "approve" if case.decision == "APPROVE" else ("deny-with-transition" if case.decision == "DENY_WITH_TRANSITION" else "deny") %}
+        {% set cls = "approve" if case.decision == "APPROVE" else ("correct-resubmit" if case.decision == "CORRECT AND RESUBMIT" else ("deny-with-transition" if case.decision == "DENY_WITH_TRANSITION" else "deny")) %}
         <a class="case-card {{ cls }}" href="/case/{{ case.case_id }}">
             <span class="decision-badge {{ cls }}">{{ case.decision | replace("_", " ") }} ({{ "%.0f" | format(case.decision_confidence * 100) }}%)</span>
             <div class="case-info">

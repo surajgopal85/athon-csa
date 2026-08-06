@@ -89,7 +89,10 @@ def _next_action(score_result, gate_results: list[GateResult]) -> str:
 
     if score_result.decision == Decision.APPROVE:
         if correctable:
-            return f"Approve pending correction: {correctable[0].fix}"
+            return (
+                f"DO NOT SUBMIT AS WRITTEN. {correctable[0].fix} "
+                f"Clinical case supports approval once corrected."
+            )
         return "Submit for approval. Clinical documentation supports continued stay."
 
     if score_result.decision == Decision.DENY_WITH_TRANSITION:
@@ -106,6 +109,17 @@ def _next_action(score_result, gate_results: list[GateResult]) -> str:
             "and goal-level tracking before resubmission."
         )
     return "Denial expected."
+
+
+def _display_decision(score_result, gate_results: list[GateResult]) -> str:
+    """The label the billing person sees. Correctable failures override
+    a clean APPROVE because the request as submitted cannot be approved."""
+    correctable = [
+        g for g in gate_results if not g.passed and g.severity == Severity.CORRECTABLE
+    ]
+    if score_result.decision == Decision.APPROVE and correctable:
+        return "CORRECT AND RESUBMIT"
+    return score_result.decision.value
 
 
 async def _run_pipeline():
@@ -131,6 +145,7 @@ async def _run_pipeline():
 
         result = score_case(case_id, gate_results, evidence)
         action = _next_action(result, gate_results)
+        display = _display_decision(result, gate_results)
 
         return case_id, {
             "case": case,
@@ -139,6 +154,7 @@ async def _run_pipeline():
             "evidence": evidence,
             "score": result,
             "next_action": action,
+            "display_decision": display,
         }
 
     tasks = [process(case) for case in cases]
@@ -163,7 +179,7 @@ async def index(request: Request):
             {
                 "case_id": case_id,
                 "member_age": ep["member_age"],
-                "decision": score.decision.value,
+                "decision": data["display_decision"],
                 "next_action": data["next_action"],
                 "decision_confidence": score.decision_confidence,
                 "has_fatal": score.has_fatal_gate,
@@ -234,7 +250,7 @@ async def case_detail(request: Request, case_id: str):
         {
             "case_id": case_id,
             "episode": ep,
-            "decision": score.decision.value,
+            "decision": data["display_decision"],
             "decision_confidence": score.decision_confidence,
             "next_action": data["next_action"],
             "has_fatal": score.has_fatal_gate,

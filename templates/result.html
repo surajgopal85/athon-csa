@@ -16,10 +16,12 @@
         .banner.approve { background: #dcffe4; border: 2px solid #22863a; }
         .banner.deny-with-transition { background: #fff5cc; border: 2px solid #dbab09; }
         .banner.deny { background: #ffdce0; border: 2px solid #cb2431; }
+        .banner.correct-resubmit { background: #fff0e0; border: 2px solid #e36209; }
         .banner-decision { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
         .banner.approve .banner-decision { color: #22863a; }
         .banner.deny-with-transition .banner-decision { color: #735c0f; }
         .banner.deny .banner-decision { color: #cb2431; }
+        .banner.correct-resubmit .banner-decision { color: #e36209; }
         .banner-action { font-size: 1rem; font-weight: 500; }
         .banner-meta { font-size: 0.85rem; color: #555; margin-top: 0.5rem; }
 
@@ -79,7 +81,7 @@
 <body>
     <a class="back" href="/">&larr; All cases</a>
 
-    {% set cls = "approve" if decision == "APPROVE" else ("deny-with-transition" if decision == "DENY_WITH_TRANSITION" else "deny") %}
+    {% set cls = "approve" if decision == "APPROVE" else ("correct-resubmit" if decision == "CORRECT AND RESUBMIT" else ("deny-with-transition" if decision == "DENY_WITH_TRANSITION" else "deny")) %}
 
     <!-- Decision Banner -->
     <div class="banner {{ cls }}">
