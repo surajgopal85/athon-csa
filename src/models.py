@@ -46,5 +46,6 @@ class Episode(BaseModel):
     submission_date: date
     last_reassessment_date: date
     prior_reassessment_date: date
+    has_reassessment: bool
     prescriber: Prescriber
     facility: Facility
