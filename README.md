@@ -16,7 +16,7 @@ Starting with one payer's one service line forces the architecture to be rule-sp
 
 ```bash
 # Clone and install
-git clone <repo-url> && cd athon-csa
+git clone https://github.com/surajgopal85/athon-csa.git && cd athon-csa
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
