@@ -20,7 +20,6 @@ git clone https://github.com/surajgopal85/athon-csa.git && cd athon-csa
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-pip install anthropic
 
 # Set your Anthropic API key
 echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
@@ -29,7 +28,7 @@ echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
 make serve
 ```
 
-The app starts at `localhost:8000`. Startup takes ~60 seconds — it runs all 7 baseline cases through the extraction API on boot. Once loaded, the dashboard shows every case with a color-coded decision and the specific next action for the billing person.
+The app starts at `localhost:8000`. Startup takes ~60 seconds — it runs all 7 baseline cases through the extraction API on boot. Once loaded, the dashboard shows every case with a color-coded decision and the specific next action for the billing person. Click any case to see the full decision rubric: procedural gate results, per-dimension clinical evidence with source quotes and confidence scores, goal tracking, and the scoring rationale.
 
 Other commands:
 - `make test` — run all 77 tests
