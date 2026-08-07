@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Case — CSA Scoring Engine</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #1a1a1a; padding: 2rem; max-width: 700px; }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { font-size: 0.85rem; margin-bottom: 1.5rem; display: inline-block; }
+        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #666; font-size: 0.875rem; margin-bottom: 2rem; }
+        .upload-box { background: white; border-radius: 8px; padding: 2rem; border: 2px dashed #ccc; text-align: center; }
+        .upload-box input[type="file"] { margin: 1rem 0; }
+        .upload-box button { background: #0366d6; color: white; border: none; padding: 0.6rem 1.5rem; border-radius: 6px; font-size: 0.9rem; cursor: pointer; }
+        .upload-box button:hover { background: #0250a3; }
+        .error { background: #ffdce0; border: 1px solid #cb2431; border-radius: 6px; padding: 1rem; margin-bottom: 1.5rem; color: #cb2431; font-size: 0.85rem; white-space: pre-wrap; }
+        .format-guide { background: white; border-radius: 8px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; }
+        .format-guide h2 { font-size: 1rem; margin-bottom: 0.75rem; }
+        .format-guide pre { background: #f5f5f5; padding: 1rem; border-radius: 4px; font-size: 0.75rem; overflow-x: auto; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <a class="back" href="/">&larr; All cases</a>
+    <h1>Upload Case</h1>
+    <p class="subtitle">Upload a JSON file containing one or more CSA case packets for evaluation.</p>
+
+    {% if error %}
+    <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <form class="upload-box" action="/upload" method="post" enctype="multipart/form-data">
+        <p>Drop a .json file or click to select</p>
+        <input type="file" name="file" accept=".json" required>
+        <br>
+        <button type="submit">Evaluate</button>
+    </form>
+
+    <div class="format-guide">
+        <h2>Format Guide</h2>
+        <pre>{
+  "case_id": "CSA-NEW",
+  "episode": {
+    "member_id": "UT-000000",
+    "member_age": 34,
+    "asam_level_requested": "3.5",
+    "intake_date": "2026-06-08",
+    "days_elapsed_at_request": 28,
+    "first_requested_dos": "2026-07-06",
+    "days_requested": 14,
+    "submission_date": "2026-07-03",
+    "last_reassessment_date": "2026-07-05",
+    "prior_reassessment_date": "2026-06-21",
+    "prescriber": {
+      "name": "M. Reyes",
+      "credential": "LCSW",
+      "license_number": "UT-7741082"
+    },
+    "facility": {
+      "name": "Diamond Recovery Center",
+      "licensed_r501_19": true,
+      "bed_count": 24,
+      "is_imd": true,
+      "accreditation": "CARF"
+    }
+  },
+  "treatment_plan": {
+    "signed_by": "M. Reyes, LCSW",
+    "signature_date": "2026-06-09",
+    "projected_schedule": "...",
+    "goals": [
+      {
+        "goal_id": "G1",
+        "date_added": "2026-06-09",
+        "text": "..."
+      }
+    ]
+  },
+  "progress_notes": [
+    {
+      "date": "2026-06-24",
+      "start_time": "10:00",
+      "stop_time": "10:45",
+      "duration_minutes": 45,
+      "setting": "Residential treatment facility, in person",
+      "service": "Psychotherapy with patient (90834)",
+      "note": "...",
+      "signature": "M. Reyes, LCSW"
+    }
+  ],
+  "reassessment": {
+    "date": "2026-07-05",
+    "performed_by": "M. Reyes, LCSW",
+    "service": "Psychiatric diagnostic evaluation, reassessment (90791)",
+    "progress_toward_goals": "...",
+    "appropriateness_of_services": "...",
+    "medical_necessity_of_continued_services": "...",
+    "asam_dimensions": {
+      "d1_withdrawal": "...",
+      "d2_biomedical": "...",
+      "d3_emotional_behavioral": "...",
+      "d4_readiness": "...",
+      "d5_relapse_potential": "...",
+      "d6_recovery_environment": "..."
+    }
+  }
+}</pre>
+        <p style="margin-top: 0.75rem; font-size: 0.8rem; color: #666;">
+            Upload a single case object or wrap multiple in <code>{"cases": [...]}</code>.
+        </p>
+    </div>
+</body>
+</html>
