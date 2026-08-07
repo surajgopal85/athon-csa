@@ -1,0 +1,2031 @@
+[
+  {
+    "case_id": "CSA-001",
+    "dimensions": [
+      {
+        "dimension": "d1_withdrawal",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Withdrawal is documented as resolved with no symptoms since day 6.",
+            "source_text": "d1_withdrawal: Resolved. No withdrawal symptoms since day 6.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d2_biomedical",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member has hypertension that is currently managed and member is medication adherent.",
+            "source_text": "d2_biomedical: Stable. Hypertension managed, medication adherent.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d3_emotional_behavioral",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "Anxiety is present but no suicidal ideation, homicidal ideation, or psychotic features are documented.",
+            "source_text": "d3_emotional_behavioral: Moderate. Anxiety present, no SI/HI, no psychotic features.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member grew visibly frustrated when unable to generate a third relapse-prevention strategy.",
+            "source_text": "but was unable to generate a third and grew visibly frustrated.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "Member described the unresolved housing situation as something he thinks about at night.",
+            "source_text": "Member expressed motivation but described the housing question as the thing he thinks about at night.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "dimension": "d4_readiness",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member is voluntarily engaged in treatment and is requesting to continue.",
+            "source_text": "d4_readiness: Low acuity. Member is voluntarily engaged and requesting continued treatment.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member asked directly whether he could remain in treatment until housing is settled.",
+            "source_text": "Member asked directly whether he could stay until housing is settled.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member attributed craving reduction to consistent group attendance and improved sleep, indicating engagement with treatment activities.",
+            "source_text": "attributing the shift to consistent group attendance and improved sleep.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d5_relapse_potential",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "Clinician documents relapse potential as high, with cravings reduced but present and the member untested in an unsupervised setting.",
+            "source_text": "d5_relapse_potential: High. Cravings reduced but present. Untested in unsupervised setting.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member stated directly that he does not believe he could refuse methamphetamine use if physically present in his apartment.",
+            "source_text": "Member stated he does not know how he would refuse if he were physically present in that apartment.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's partner contacts him actively and requests his return home, representing ongoing external pressure toward a using environment.",
+            "source_text": "Member disclosed that his partner continues to use methamphetamine daily and has contacted him twice this week asking when he is coming home.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Clinician identified the partner's active use and member's inability to articulate refusal as a primary discharge risk.",
+            "source_text": "Discussed this as a primary discharge risk.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Clinician assessed that Dimension 5 relapse potential remains correspondingly elevated notwithstanding clinical gains.",
+            "source_text": "Dimension 5 relapse potential is correspondingly elevated notwithstanding clinical gains.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d6_recovery_environment",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "Clinician documents recovery environment as high acuity with no sober housing and a confirmed discharge address containing an active user.",
+            "source_text": "d6_recovery_environment: High. No sober housing. Confirmed discharge address contains an active user.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has no family in state and no alternative housing besides the apartment with his using partner.",
+            "source_text": "member could not describe where he would go, noting he has no other housing and no family in state.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's partner uses methamphetamine daily.",
+            "source_text": "his partner continues to use methamphetamine daily",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "No sober-living placement has been identified as of the reassessment date, with one intake interview pending.",
+            "source_text": "G3: not met. Sober-living placement not secured. One intake interview pending 7/09.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Clinician assessed that a step-down to 2.5 or 2.1 would return the member nightly to the same unsafe environment and would not be equally effective.",
+            "source_text": "A step-down to 2.5 or 2.1 would return member nightly to the same unsafe environment that constitutes the primary risk, and would not be equally effective.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "G1",
+        "status": "partially_met",
+        "assertions": [
+          {
+            "assertion": "Craving intensity has reduced from 8/10 at intake to 5/10 sustained across two weeks, but has not yet reached the target of 4/10 or below.",
+            "source_text": "G1: measurable progress. Craving intensity reduced from 8/10 at intake to 5/10, sustained across two weeks.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity was 6/10 in the 2026-06-24 session, down from 7/10 the prior week.",
+            "source_text": "Reported craving intensity at 6/10 this week, down from 7/10 last week",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity was unchanged at 6/10 in the 2026-06-28 session.",
+            "source_text": "Craving intensity reported at 6/10, unchanged from prior session.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity was reported at 5/10 in the 2026-07-01 group session.",
+            "source_text": "Craving intensity reported at 5/10.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity was sustained at 5/10 in the 2026-07-04 session, down from 8/10 at intake.",
+            "source_text": "Craving intensity reported at 5/10, sustained from prior session and down from 8/10 at intake.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G2",
+        "status": "partially_met",
+        "assertions": [
+          {
+            "assertion": "Member articulated two of three required relapse-prevention strategies without prompting as of 2026-06-24.",
+            "source_text": "Member articulated two strategies without prompting, urge surfing and calling a designated peer, but was unable to generate a third and grew visibly frustrated.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member generated a third relapse-prevention strategy\u2014removing himself physically from the environment and going to a scheduled meeting\u2014in the 2026-06-28 session.",
+            "source_text": "Member generated a third relapse-prevention strategy this session, removing himself physically from the environment and going to a scheduled meeting, which represents progress on G2.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "When asked to apply the third strategy to his own apartment, member could not describe where he would go due to having no other housing.",
+            "source_text": "When asked to rehearse applying it to his own apartment, member could not describe where he would go, noting he has no other housing and no family in state.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member rehearsed all three relapse-prevention strategies and applied them to two hypothetical scenarios with adequate specificity as of 2026-07-04.",
+            "source_text": "Member rehearsed all three relapse-prevention strategies and applied them to two hypothetical scenarios with adequate specificity. Progress on G2 is meaningful.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Clinician characterized G2 as substantially met in the reassessment.",
+            "source_text": "G2: goal substantially met. Member has articulated and rehearsed three strategies and applied them to scenario work.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member volunteered his personal scenario in group and accepted peer feedback without defensiveness, the first time he brought personal material to group.",
+            "source_text": "Member volunteered his own scenario for group problem-solving, describing the apartment and his partner's active use, and accepted feedback from three peers without defensiveness. This is the first time member has brought personal material to group.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G3",
+        "status": "not_met",
+        "assertions": [
+          {
+            "assertion": "Member completed the initial housing application with case management on 2026-06-26.",
+            "source_text": "Member completed the initial housing application with case management on 6/26.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "No sober-living placement has been identified as of 2026-06-28.",
+            "source_text": "No placement identified yet.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "As of 2026-07-04, case management had contacted two sober-living facilities: one placed member on a waitlist and one has a pending intake interview scheduled for 2026-07-09.",
+            "source_text": "Case management reports two sober-living facilities contacted, one waitlist, one pending intake interview scheduled 7/09.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member reiterated as of 2026-07-04 that he has no alternative to returning to the apartment with his partner if placement does not materialize.",
+            "source_text": "Member reiterated he has no alternative to returning to the apartment with his partner if placement does not materialize.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Clinician documented G3 as not met in the reassessment, with sober-living placement not secured.",
+            "source_text": "G3: not met. Sober-living placement not secured. One intake interview pending 7/09.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "CSA-002",
+    "dimensions": [
+      {
+        "dimension": "d1_withdrawal",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Withdrawal symptoms resolved by day 4 of the episode.",
+            "source_text": "Resolved. No withdrawal symptoms since day 4.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d2_biomedical",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member has no active medical issues.",
+            "source_text": "Stable. No active medical issues.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d3_emotional_behavioral",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member's mood is euthymic.",
+            "source_text": "Mood euthymic, sleep restored, no SI/HI.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's sleep has been restored.",
+            "source_text": "Mood euthymic, sleep restored, no SI/HI.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member denied suicidal ideation and homicidal ideation.",
+            "source_text": "Mood euthymic, sleep restored, no SI/HI.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member reports no acute anxiety.",
+            "source_text": "Member reports sleeping well, no acute anxiety, and describes his motivation as steady rather than fragile.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d4_readiness",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member is actively engaged and self-directed in treatment.",
+            "source_text": "Low acuity. Member actively engaged and self-directed.",
+            "confidence": 0.8,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "Member served as an informal support to two newer members in group.",
+            "source_text": "Member attended relapse-prevention group and served as an informal support to two newer members.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member described his written relapse-prevention plan to the group and fielded questions with clarity.",
+            "source_text": "Member described his written plan to the group and fielded questions with clarity.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member expressed impatience with the residential setting and stated he feels ready to practice skills in the real world.",
+            "source_text": "Member expressed some impatience with the residential setting, stating he feels ready to practice these skills in the world rather than rehearse them.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member again raised readiness for discharge at the 7/03 session.",
+            "source_text": "Member again raised readiness for discharge.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member describes his motivation as steady rather than fragile.",
+            "source_text": "describes his motivation as steady rather than fragile.",
+            "confidence": 0.8,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "dimension": "d5_relapse_potential",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "The reassessment characterizes relapse potential as low to moderate.",
+            "source_text": "Low to moderate. Cravings minimal, plan established and rehearsed, sponsor engaged.",
+            "confidence": 0.8,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity decreased from 7/10 at intake to 3/10 on 6/23.",
+            "source_text": "Member reported craving intensity at 3/10, down from 7/10 at intake.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity was reported at 2/10 on 6/30.",
+            "source_text": "Craving intensity reported at 2/10.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity was reported at 2/10 on 7/03, sustained at 3/10 or below for three consecutive weeks.",
+            "source_text": "Craving intensity reported at 2/10, sustained third consecutive week at 3/10 or below.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member denied any alcohol use throughout the episode.",
+            "source_text": "No use throughout episode.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's written relapse-prevention plan includes trigger identification for work stress and social events involving alcohol.",
+            "source_text": "Plan is specific and includes trigger identification for work stress and for social events involving alcohol.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member was able to describe how he would leave a work function if alcohol were present, including who he would call from the parking lot.",
+            "source_text": "Member was able to describe how he would leave a work function if alcohol were present, including who he would call from the parking lot.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Sponsor contact has been confirmed three times weekly.",
+            "source_text": "confirmed sponsor contact three times weekly",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician's request for 14 additional residential days cites risk of early relapse following a rapid course of improvement.",
+            "source_text": "Requesting 14 additional days at 3.5 to consolidate gains and reduce risk of early relapse following a rapid course of improvement.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d6_recovery_environment",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member has confirmed housing with spouse in an alcohol-free home.",
+            "source_text": "Member has confirmed housing with spouse in an alcohol-free home",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Spouse has permanently removed alcohol from the home since member's admission.",
+            "source_text": "Spouse confirmed the home has been alcohol-free since member's admission and that she has removed alcohol permanently.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Spouse has been attending Al-Anon weekly for four weeks.",
+            "source_text": "Spouse described her own attendance at Al-Anon, now weekly for four weeks.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's employer has confirmed his position is held and he is scheduled to return to work on a graduated basis.",
+            "source_text": "Member noted that his employer has confirmed his position is held and that he is scheduled to return to work on a graduated basis.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member and spouse have a post-discharge plan including nightly check-ins and three weekly meetings for member.",
+            "source_text": "Member and spouse identified a plan for the first thirty days post-discharge including nightly check-ins and three weekly meetings for member.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has scheduled an IOP intake for 7/08.",
+            "source_text": "has scheduled an IOP intake for 7/08.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has three named supports: spouse, sponsor, and a coworker who is nine years sober.",
+            "source_text": "three named supports: spouse, sponsor, and a coworker who is nine years sober.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "G1",
+        "status": "met",
+        "assertions": [
+          {
+            "assertion": "Craving intensity was reported at 3/10 on 6/23, down from 7/10 at intake.",
+            "source_text": "Member reported craving intensity at 3/10, down from 7/10 at intake.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity was reported at 2/10 on 6/30.",
+            "source_text": "Craving intensity reported at 2/10.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity was reported at 2/10 on 7/03, sustained at 3/10 or below for three consecutive weeks.",
+            "source_text": "Craving intensity reported at 2/10, sustained third consecutive week at 3/10 or below.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member denied any alcohol use throughout the episode.",
+            "source_text": "No use throughout episode.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The reassessment declares G1 met.",
+            "source_text": "G1: met. Craving intensity at or below 3/10 across three consecutive weeks, currently 2/10. No use throughout episode.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G2",
+        "status": "met",
+        "assertions": [
+          {
+            "assertion": "Member produced a draft written relapse-prevention plan on 6/23 containing five coping strategies and three named supports.",
+            "source_text": "Member produced a draft written relapse-prevention plan containing five coping strategies and three named supports: spouse, sponsor, and a coworker who is nine years sober.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member described his written plan to the group on 6/30 and fielded questions with clarity.",
+            "source_text": "Member described his written plan to the group and fielded questions with clarity.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The written relapse-prevention plan was finalized and reviewed on 7/03.",
+            "source_text": "Written relapse-prevention plan finalized and reviewed.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The reassessment declares G2 met.",
+            "source_text": "G2: met. Written plan finalized with five strategies and three named supports, rehearsed in individual and group settings.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G3",
+        "status": "met",
+        "assertions": [
+          {
+            "assertion": "The 6/27 session was the fifth family session, with spouse present.",
+            "source_text": "Fifth family session. Spouse present.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The sixth family session was completed on 7/01.",
+            "source_text": "Sixth family session completed 7/01.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The couple practiced a structured check-in protocol and reported using it twice during spouse's visits.",
+            "source_text": "Couple practiced a structured check-in protocol they had rehearsed between sessions and reported using it twice during spouse's visits.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Spouse is independently attending Al-Anon weekly.",
+            "source_text": "Spouse described her own attendance at Al-Anon, now weekly for four weeks.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The reassessment declares G3 met.",
+            "source_text": "G3: met. Six family sessions completed with spouse; spouse engaged in Al-Anon independently.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "CSA-003",
+    "dimensions": [
+      {
+        "dimension": "d1_withdrawal",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Withdrawal is documented as resolved as of the reassessment date.",
+            "source_text": "d1_withdrawal: Resolved.",
+            "confidence": 0.7,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "dimension": "d2_biomedical",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Biomedical status is documented as stable as of the reassessment date.",
+            "source_text": "d2_biomedical: Stable.",
+            "confidence": 0.7,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "dimension": "d3_emotional_behavioral",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "Emotional and behavioral acuity is rated moderate at reassessment with no elaboration provided.",
+            "source_text": "d3_emotional_behavioral: Moderate.",
+            "confidence": 0.3,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "The member was described as quiet during an individual therapy session.",
+            "source_text": "Member was quiet.",
+            "confidence": 0.5,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "No behavioral concerns were noted during the group session on 2026-06-29.",
+            "source_text": "No behavioral concerns.",
+            "confidence": 0.7,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "No new issues were reported during the individual session on 2026-07-06.",
+            "source_text": "No new issues reported.",
+            "confidence": 0.7,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d4_readiness",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "Readiness to change is rated moderate at reassessment with no elaboration provided.",
+            "source_text": "d4_readiness: Moderate.",
+            "confidence": 0.3,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "The member is described as remaining engaged in the program as of 2026-07-06.",
+            "source_text": "Member remains engaged in the program.",
+            "confidence": 0.5,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "dimension": "d5_relapse_potential",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "Relapse potential is rated high at reassessment with no elaboration provided.",
+            "source_text": "d5_relapse_potential: High.",
+            "confidence": 0.3,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "dimension": "d6_recovery_environment",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "Recovery environment is rated high acuity at reassessment with no elaboration provided.",
+            "source_text": "d6_recovery_environment: High.",
+            "confidence": 0.3,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "G1",
+        "status": "unable_to_assess",
+        "assertions": [
+          {
+            "assertion": "The member attended the individual therapy session on 2026-06-25 but verbal participation in group sessions is not documented.",
+            "source_text": "Member attended session.",
+            "confidence": 0.4,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "The member attended the group session on 2026-06-29 but is described only as having listened, with no documentation of verbal participation.",
+            "source_text": "Member attended group. Topic was relapse prevention. Member listened.",
+            "confidence": 0.7,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The reassessment states only that the member continues to work on treatment goals, with no specific reference to G1 attendance or verbal participation criteria.",
+            "source_text": "Member continues to work on treatment goals. Progress is ongoing.",
+            "confidence": 0.2,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "goal_id": "G2",
+        "status": "unable_to_assess",
+        "assertions": [
+          {
+            "assertion": "The group session on 2026-06-29 covered relapse prevention but no documentation indicates the member identified personal triggers or produced a written inventory.",
+            "source_text": "Topic was relapse prevention. Member listened.",
+            "confidence": 0.5,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "The reassessment does not reference the trigger inventory or any progress specific to G2.",
+            "source_text": "Member continues to work on treatment goals. Progress is ongoing.",
+            "confidence": 0.2,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "goal_id": "G3",
+        "status": "unable_to_assess",
+        "assertions": [
+          {
+            "assertion": "No progress note or reassessment entry references contact with family members.",
+            "source_text": "Member continues to work on treatment goals. Progress is ongoing.",
+            "confidence": 0.2,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "CSA-004",
+    "dimensions": [
+      {
+        "dimension": "d1_withdrawal",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Withdrawal symptoms have been resolved since day 9 of treatment.",
+            "source_text": "d1_withdrawal: Resolved. No withdrawal symptoms since day 9.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d2_biomedical",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "The member has no acute biomedical issues and is medically stable.",
+            "source_text": "d2_biomedical: Stable. No acute issues.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d3_emotional_behavioral",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "The member is experiencing an acute grief reaction with sleep disruption and tearfulness following his mother's death on 6/26.",
+            "source_text": "d3_emotional_behavioral: High. Acute grief reaction, sleep disruption, tearfulness. No SI/HI, no psychosis.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member denied suicidal ideation and homicidal ideation when asked directly on 6/28.",
+            "source_text": "Member tearful throughout, denied SI and HI when asked directly.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member's mental status on 6/28 showed no psychosis, with grief-congruent affect and full orientation.",
+            "source_text": "Mental status: alert, oriented, grief-congruent affect, no psychosis.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member denied suicidal ideation on 7/03.",
+            "source_text": "Member denies SI.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member reported being unable to tolerate the group setting as of the 7/04 reassessment.",
+            "source_text": "Barrier documented: acute bereavement, member unable to tolerate group setting.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d4_readiness",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "The member remains voluntarily engaged in treatment and is requesting continuation.",
+            "source_text": "d4_readiness: Low acuity. Member remains voluntarily engaged and is requesting continued treatment.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member stated that staying in the residential facility is the only reason he has not used.",
+            "source_text": "Member stated today that staying here is the only reason he has not used, which is clinically consistent with his presentation.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d5_relapse_potential",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "Craving intensity spiked to 8/10 in the twenty-four hours following notification of his mother's death on 6/26.",
+            "source_text": "Member reported craving intensity spiked to 8/10 in the twenty-four hours following notification.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity has settled at 7/10 as of 7/01 and remains unchanged through 7/03, elevated above the pre-event baseline of 5/10.",
+            "source_text": "Craving intensity remains at 7/10, elevated from 5/10 prior to 6/26.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member verbalized an urge to use on 6/26 but did not act on it.",
+            "source_text": "Member stated he wanted to use and did not, and asked staff to sit with him overnight, which staff did.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member has not used substances despite elevated cravings and is currently maintained within 24-hour residential structure.",
+            "source_text": "Member is attending individual sessions daily and has not used.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician assessed relapse potential as high, with craving intensity elevated from the pre-event baseline following bereavement.",
+            "source_text": "d5_relapse_potential: High. Craving intensity 7/10, elevated from 5/10 pre-event. Verbalized urge to use on 6/26.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d6_recovery_environment",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "The member's confirmed post-discharge housing arrangement, his mother's residence, is no longer available following her death.",
+            "source_text": "d6_recovery_environment: High. Prior housing plan void following the death of the member's mother. No placement identified.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member's mother had been his primary supportive contact in addition to his confirmed housing provider.",
+            "source_text": "Member was very close to his mother, who had been his primary supportive contact and had agreed to house him post-discharge.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Case management has opened a sober-living referral but no placement has been identified as of 7/03.",
+            "source_text": "Case management has opened a sober-living referral, no placement identified.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The G3 post-discharge safety plan has regressed because the housing element, which was the deceased's residence, is now void.",
+            "source_text": "G3: regressed. The confirmed post-discharge housing arrangement was the deceased's residence and is no longer available.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "G1",
+        "status": "regressed",
+        "assertions": [
+          {
+            "assertion": "Craving intensity reached the goal threshold of 5/10 and was sustained for eight days prior to 6/24.",
+            "source_text": "Craving intensity reported at 5/10, down from 9/10 at intake and sustained for eight days.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity spiked to 8/10 following notification of his mother's death on 6/26, exceeding the goal threshold.",
+            "source_text": "Member reported craving intensity spiked to 8/10 in the twenty-four hours following notification.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity has settled at 7/10 as of 7/01 and remains at 7/10 as of 7/03 and the 7/04 reassessment, above the goal threshold of 5/10.",
+            "source_text": "Craving intensity 7/10, unchanged.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician documented acute bereavement as the barrier to G1 progress.",
+            "source_text": "G1: no reportable progress this review period. Craving intensity rose from 5/10 to 8/10 following member's mother's death on 6/26 and has settled at 7/10. Barrier documented: acute bereavement.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G2",
+        "status": "regressed",
+        "assertions": [
+          {
+            "assertion": "The member participated in all groups and contributed verbally in each session during the week documented in the 6/24 note.",
+            "source_text": "Member participated in all groups this week and contributed verbally in each.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member has not attended group since 6/26 and declined to attend the 6/28 crisis session, stating he cannot talk in front of people.",
+            "source_text": "Member has not attended group since 6/26 and declined to attend today, stating he cannot talk in front of people right now.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The group participation expectation was temporarily suspended by the clinician following the 6/28 crisis event.",
+            "source_text": "Disposition: continue at current level, increase individual contact to daily, hold group participation expectation temporarily.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The member attended the first fifteen minutes of group on 7/02, which the clinician characterized as an early sign of re-engagement rather than goal attainment.",
+            "source_text": "Member attended the first fifteen minutes of group on 7/02 and left; this is his first group attendance since 6/26 and is noted as an early sign of re-engagement rather than as goal attainment.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician documented acute bereavement and inability to tolerate group setting as the barrier to G2.",
+            "source_text": "G2: not met this review period. Member did not attend group between 6/26 and 7/02 and attended partially on 7/02. Barrier documented: acute bereavement, member unable to tolerate group setting.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G3",
+        "status": "regressed",
+        "assertions": [
+          {
+            "assertion": "As of 6/24, the member had begun drafting a post-discharge safety plan and had identified transportation as the unresolved element.",
+            "source_text": "Member began drafting a post-discharge safety plan and identified transportation as the unresolved element.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The housing element of the post-discharge safety plan is void because the confirmed housing arrangement was the deceased mother's residence.",
+            "source_text": "G3: regressed. The confirmed post-discharge housing arrangement was the deceased's residence and is no longer available.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Case management has opened a sober-living referral as a replacement housing resource but no placement has been identified.",
+            "source_text": "Case management has opened a sober-living referral, no placement identified.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician documented G3 as regressed in both the 7/03 progress note and the 7/04 reassessment.",
+            "source_text": "G3 has regressed: the housing arrangement documented on 6/18 is void.",
+            "confidence": 1.0,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "CSA-005",
+    "dimensions": [
+      {
+        "dimension": "d1_withdrawal",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Withdrawal is documented as resolved following stabilization on buprenorphine.",
+            "source_text": "d1_withdrawal: Resolved. Stabilized on buprenorphine.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d2_biomedical",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member has a documented diagnosis of Hepatitis C that is untreated and followed by primary care.",
+            "source_text": "d2_biomedical: Stable. Hepatitis C, untreated, followed by primary care.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "No acute biomedical issues are documented.",
+            "source_text": "d2_biomedical: Stable. Hepatitis C, untreated, followed by primary care. No acute issues.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d3_emotional_behavioral",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "Emotional/behavioral acuity is documented as low to moderate with stable mood.",
+            "source_text": "d3_emotional_behavioral: Low to moderate. Mood stable, no SI/HI.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member denied suicidal ideation and homicidal ideation.",
+            "source_text": "d3_emotional_behavioral: Low to moderate. Mood stable, no SI/HI.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member processed a distressing phone call with his brother without escalation, which the clinician noted as a notable change from week two behavior.",
+            "source_text": "Member processed this without escalation, which is a notable change from week two behavior.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d4_readiness",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Readiness to change is documented as low acuity with the member described as highly engaged.",
+            "source_text": "d4_readiness: Low acuity. Member highly engaged, functioning as informal peer mentor.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has taken on an informal peer-mentor role within the residential program.",
+            "source_text": "Member is functioning well within the structure and has taken on a peer-mentor role informally.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member described his buprenorphine stabilization experience to newer group members, including the dose adjustment period.",
+            "source_text": "Member described his experience of stabilizing on buprenorphine to two newer members, including the first two weeks of dose adjustment.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d5_relapse_potential",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "Relapse potential is documented as moderate with cravings described as well controlled on MAT.",
+            "source_text": "d5_relapse_potential: Moderate. Cravings well controlled on MAT. Untested outside structure.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician notes that member's craving control is untested outside of the residential structure.",
+            "source_text": "d5_relapse_potential: Moderate. Cravings well controlled on MAT. Untested outside structure.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity decreased from 10/10 at intake to 4/10, sustained for thirteen consecutive days as of 2026-07-05.",
+            "source_text": "Craving intensity at 4/10 sustained thirteen consecutive days, down from 10/10 at intake.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d6_recovery_environment",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "Recovery environment is documented as high acuity solely due to a housing gap: no housing is available until 7/18.",
+            "source_text": "d6_recovery_environment: High. No housing available until 7/18. Alternative is unsheltered.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's only housing alternative prior to 7/18 is unsheltered living, as his brother's residence is unavailable and his prior residence was an encampment.",
+            "source_text": "Member has no alternative housing; brother's residence is unavailable and member's prior residence was an encampment.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member stated that returning to unsheltered living would end his recovery.",
+            "source_text": "Member has no housing prior to 7/18 and has stated that returning to unsheltered living would end his recovery.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician assessed that buprenorphine adherence and IOP attendance would both be improbable if member returned to unsheltered living.",
+            "source_text": "the alternative to continued residential placement is unsheltered living, in which buprenorphine adherence and IOP attendance are both improbable.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member received a distressing communication from his brother that he is not welcome to return to the family home.",
+            "source_text": "Member described a difficult phone call with his brother in which he was told he is not welcome to return to the family home.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "G1",
+        "status": "met",
+        "assertions": [
+          {
+            "assertion": "Craving intensity is documented at 4/10, sustained for thirteen consecutive days, meeting the goal criterion of 4/10 or below for two consecutive weeks.",
+            "source_text": "G1: met. Craving intensity at 4/10 sustained thirteen consecutive days, down from 10/10 at intake.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The 2026-07-05 progress note confirms craving intensity at 4/10 sustained thirteen days, explicitly noting G1 as meeting criteria.",
+            "source_text": "Craving intensity 4/10, sustained thirteen days, meeting G1.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "As of 2026-06-25, craving intensity was 5/10, which was above the goal threshold of 4/10.",
+            "source_text": "Craving intensity reported at 5/10, down from 10/10 at intake.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "As of 2026-06-29, craving intensity was reported at 4/10 in group psychotherapy.",
+            "source_text": "Craving intensity reported at 4/10.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "As of 2026-07-02, craving intensity was reported at 4/10 sustained ten days.",
+            "source_text": "Craving intensity reported at 4/10, sustained ten days.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G2",
+        "status": "met",
+        "assertions": [
+          {
+            "assertion": "Buprenorphine adherence is documented as complete across four weeks with no missed doses, meeting the goal criterion.",
+            "source_text": "G2: met. Buprenorphine adherence complete across four weeks with no missed doses.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The 2026-07-02 progress note confirms four weeks of complete buprenorphine adherence with no missed doses, explicitly noting G2 as met.",
+            "source_text": "Buprenorphine adherence complete, now four weeks with no missed doses, meeting G2.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "As of 2026-06-25, buprenorphine adherence was documented as complete with no missed doses across three weeks.",
+            "source_text": "Buprenorphine adherence complete, no missed doses in three weeks.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "As of 2026-07-05, buprenorphine adherence is documented as continuing.",
+            "source_text": "Buprenorphine adherence continues.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G3",
+        "status": "partially_met",
+        "assertions": [
+          {
+            "assertion": "Sober-living placement has been confirmed with an availability date of 7/18.",
+            "source_text": "G3: partially met. Sober-living placement confirmed with availability 7/18.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "IOP intake is scheduled for 7/21, contingent on housing.",
+            "source_text": "IOP intake scheduled 7/21.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "As of 2026-07-02, the IOP intake was described as contingent on housing, not yet completed.",
+            "source_text": "Member and case management scheduled IOP intake for 7/21, contingent on housing.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "A sober-living referral was submitted on 6/23 and the facility responded on 7/01 with a waitlist position.",
+            "source_text": "Sober-living referral submitted 6/23. Sober-living facility responded 7/01 with a waitlist position and an estimated availability of 7/18.",
+            "confidence": 0.98,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "As of 2026-07-05, sober-living availability is confirmed for 7/18 and member has organized his discharge planning around that date.",
+            "source_text": "Sober-living availability confirmed for 7/18. Member is aware of the date and has organized his discharge planning around it.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Neither the sober-living placement nor the IOP intake had been completed as of the reassessment date of 2026-07-06.",
+            "source_text": "G3: partially met. Sober-living placement confirmed with availability 7/18. IOP intake scheduled 7/21.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "CSA-006",
+    "dimensions": [
+      {
+        "dimension": "d1_withdrawal",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Withdrawal symptoms have been absent since day 11 of treatment.",
+            "source_text": "Resolved. No withdrawal symptoms since day 11.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d2_biomedical",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member has no acute biomedical issues and is medically stable.",
+            "source_text": "Stable. No acute issues.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "dimension": "d3_emotional_behavioral",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "Member experienced approximately one day of emotional withdrawal following his sister's visit, attributed to a conversation about his son's custody arrangement.",
+            "source_text": "Member's sister visited Sunday and afterward member was withdrawn for approximately a day; member attributed this to a conversation about his son's custody arrangement rather than to substance-related content.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The reassessment characterizes emotional-behavioral acuity as moderate with some affective flattening post-visit.",
+            "source_text": "Moderate. Some flattening post-visit, no SI/HI, no psychosis.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "Member denied suicidal ideation, homicidal ideation, and psychosis.",
+            "source_text": "no SI/HI, no psychosis.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member became defensive during group peer feedback before re-engaging.",
+            "source_text": "Peer feedback challenged this and member became somewhat defensive before re-engaging.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's tolerance for challenge and willingness to revise his own self-report improved materially since week one.",
+            "source_text": "Member's engagement in session is genuine and he tolerates challenge well, which is a meaningful change from week one.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": true
+          }
+        ]
+      },
+      {
+        "dimension": "d4_readiness",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "The reassessment characterizes readiness as moderate with engagement present but self-report accuracy identified as a limiting factor.",
+            "source_text": "Moderate. Engaged, though self-report accuracy has been a limiting factor.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "Member acknowledged underreporting his struggles to staff because he did not want staff to think he was going backward.",
+            "source_text": "member acknowledged he had told her he was struggling and said he did not want staff to think he was going backward.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Following discussion of the collateral report, member revised his craving estimate upward and engaged productively in conversation about the difference between reporting and performing.",
+            "source_text": "Productive conversation about the difference between reporting and performing. Member subsequently revised his craving report upward, describing evenings as closer to 6.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member declined a ride from a former roommate after initially accepting without thinking.",
+            "source_text": "member mentioned in passing that he had been offered a ride home by a former roommate and had said yes before thinking about it, then declined the following day.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d5_relapse_potential",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "The reassessment characterizes relapse potential as moderate to high.",
+            "source_text": "Moderate to high. See note: group facilitator assessed confidence as exceeding history; individual clinician assessed relapse potential as moderate on 7/01 prior to collateral.",
+            "confidence": 0.9,
+            "conflicting": true,
+            "unquantified": true
+          },
+          {
+            "assertion": "The group facilitator assessed member's stated confidence in his ability to resist using as exceeding what his history would support.",
+            "source_text": "Facilitator note: member's stated confidence appears to exceed what his history would support, though he is not dismissive of feedback.",
+            "confidence": 0.9,
+            "conflicting": true,
+            "unquantified": true
+          },
+          {
+            "assertion": "The individual clinician assessed relapse potential as moderate on 7/01, prior to receipt and discussion of the collateral report.",
+            "source_text": "individual clinician assessed relapse potential as moderate on 7/01 prior to collateral.",
+            "confidence": 0.85,
+            "conflicting": true,
+            "unquantified": true
+          },
+          {
+            "assertion": "Member's self-report of craving intensity was revised upward from 4/10 to approximately 6/10 in the evenings following discussion of collateral information on 7/05.",
+            "source_text": "Member subsequently revised his craving report upward, describing evenings as closer to 6.",
+            "confidence": 0.95,
+            "conflicting": true,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's sister reported by voicemail that she believes he is minimizing and that he told her he was struggling more than he lets on.",
+            "source_text": "Collateral from sister received by voicemail today states she is worried he is minimizing and that he told her last week he was struggling more than he lets on.",
+            "confidence": 0.95,
+            "conflicting": true,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member stated he believes he could hold his ground in his prior living situation despite it housing multiple people who use substances.",
+            "source_text": "Member volunteered that his living situation prior to admission involved multiple people who use and that he does not expect that to have changed, but stated he feels differently about it now than he did a month ago and believes he could hold his ground.",
+            "confidence": 0.9,
+            "conflicting": true,
+            "unquantified": true
+          },
+          {
+            "assertion": "Member's coping responses for identified high-risk situations remain general rather than actionable, including an inability to describe how he would avoid his former roommate given shared phone plan and roommate's possession of a key to the intended discharge apartment.",
+            "source_text": "Coping responses articulated for both identified situations were general rather than specific; member said he would avoid the roommate but could not describe how, given that they share a phone plan and the roommate has a key to the apartment member intends to return to.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d6_recovery_environment",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "The reassessment characterizes recovery environment acuity as high.",
+            "source_text": "High. Intended discharge residence houses at least one active user. One sober support identified.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "Member intends to return to his prior apartment, which he acknowledges houses at least one active user.",
+            "source_text": "member intends to return to his prior apartment, which he acknowledges houses at least one active user",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's prior living situation involved multiple people who use substances and he does not expect that to have changed.",
+            "source_text": "Member volunteered that his living situation prior to admission involved multiple people who use and that he does not expect that to have changed",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has identified only one sober support (his sister) of the two required by G3.",
+            "source_text": "He could not name a second.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has not identified an alternative to the intended discharge residence housing an active user.",
+            "source_text": "Dimension 6 is unresolved: the intended discharge residence houses an active user and member has not identified an alternative.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's former roommate retains a key to the apartment member intends to return to.",
+            "source_text": "the roommate has a key to the apartment member intends to return to.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "G1",
+        "status": "partially_met",
+        "assertions": [
+          {
+            "assertion": "Craving intensity has decreased from 8/10 at intake to a reported range of 4/10 to 6/10 depending on time of day, with evenings remaining more difficult.",
+            "source_text": "Craving intensity reported between 4/10 and 6/10 depending on time of day, down from 8/10 at intake, though member's self-report has been inconsistent across the period and was revised upward on 7/05 following discussion of collateral.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member self-reported cravings at 4/10 on 7/01, meeting the goal threshold, but this report was assessed as possibly minimized based on collateral.",
+            "source_text": "When asked for a number he said maybe a 4 but then said it depends. Collateral from sister received by voicemail today states she is worried he is minimizing and that he told her last week he was struggling more than he lets on.",
+            "confidence": 0.9,
+            "conflicting": true,
+            "unquantified": false
+          },
+          {
+            "assertion": "On 7/05, following discussion of the collateral report, member revised his craving estimate upward, describing evening cravings as closer to 6/10, above the goal threshold of 4/10.",
+            "source_text": "Member subsequently revised his craving report upward, describing evenings as closer to 6.",
+            "confidence": 0.95,
+            "conflicting": true,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's self-report of craving intensity has been inconsistent across the review period.",
+            "source_text": "member's self-report has been inconsistent across the period and was revised upward on 7/05 following discussion of collateral.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "On 2026-06-24, member described cravings as around 5/10, noting this varies considerably by time of day with evenings remaining difficult.",
+            "source_text": "described cravings as around a 5, though he noted this varies considerably by time of day and that evenings remain difficult.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G2",
+        "status": "partially_met",
+        "assertions": [
+          {
+            "assertion": "Member has identified two of the three required high-risk situations: payday and contact with his former roommate.",
+            "source_text": "Member identified two high-risk situations with reasonable specificity: payday, and contact with his former roommate. He was unable to produce a third despite prompting.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member was unable to identify a third high-risk situation despite prompting.",
+            "source_text": "He was unable to produce a third despite prompting.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Coping responses articulated for both identified high-risk situations are general rather than specific or actionable.",
+            "source_text": "Coping responses articulated for both identified situations were general rather than specific; member said he would avoid the roommate but could not describe how, given that they share a phone plan and the roommate has a key to the apartment member intends to return to.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The reassessment confirms G2 is partially met, noting two of three situations identified and coping responses remaining general rather than actionable.",
+            "source_text": "G2: partially met. Two of three high-risk situations identified; coping responses remain general rather than actionable.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G3",
+        "status": "not_met",
+        "assertions": [
+          {
+            "assertion": "Member's intended post-discharge housing is a return to his prior apartment, which houses at least one active substance user, and no alternative has been identified.",
+            "source_text": "Housing plan is a return to a residence with at least one active user.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has identified only one sober support (his sister) and could not name a second.",
+            "source_text": "One sober support named of two required.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The reassessment designates G3 as not met.",
+            "source_text": "G3: not met.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "CSA-007",
+    "dimensions": [
+      {
+        "dimension": "d1_withdrawal",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Withdrawal is documented as resolved with no symptoms since day 5 of the episode.",
+            "source_text": "d1_withdrawal: Resolved. No withdrawal symptoms since day 5.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d2_biomedical",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "Member has a documented history of asthma managed with a controller inhaler.",
+            "source_text": "d2_biomedical: Stable. Asthma, controller inhaler, adherent.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member is documented as adherent to the controller inhaler regimen.",
+            "source_text": "d2_biomedical: Stable. Asthma, controller inhaler, adherent.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d3_emotional_behavioral",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "Member is experiencing anxiety specifically related to returning to his prior high school.",
+            "source_text": "Member expressed anxiety about returning to his prior high school, where he reports that his primary using peer group remains and where he was truant for most of the spring semester.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Suicidal ideation, homicidal ideation, and psychosis are explicitly denied in the reassessment.",
+            "source_text": "No SI/HI, no psychosis.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician assessed emotional and behavioral acuity as moderate.",
+            "source_text": "d3_emotional_behavioral: Moderate. Anxiety regarding school return. No SI/HI, no psychosis.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d4_readiness",
+        "acuity": "low",
+        "assertions": [
+          {
+            "assertion": "The clinician assessed the member as engaged in treatment.",
+            "source_text": "d4_readiness: Low acuity. Member engaged, accurate in self-assessment.",
+            "confidence": 0.8,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "The clinician assessed the member as accurate in self-assessment.",
+            "source_text": "d4_readiness: Low acuity. Member engaged, accurate in self-assessment.",
+            "confidence": 0.8,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "Member demonstrated accurate self-assessment when he noted that practicing refusal skills in the group room felt different from doing so in a car, which the facilitator affirmed as accurate rather than pessimistic.",
+            "source_text": "Member role-played a refusal scenario involving a specific named friend and was able to complete it, though he noted afterward that doing it in the room felt different from doing it in a car. Facilitator agreed and framed this as accurate self-assessment rather than pessimism.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member self-reported that his stability depends on having every hour accounted for.",
+            "source_text": "Member stated he does well here because every hour is accounted for.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d5_relapse_potential",
+        "acuity": "moderate",
+        "assertions": [
+          {
+            "assertion": "Member's craving intensity decreased from 8/10 at intake to 4/10 and has been sustained at that level for twelve days as of 2026-07-06.",
+            "source_text": "Craving intensity reduced from 8/10 at intake to 4/10, sustained twelve days.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member denied any substance use throughout the episode of care.",
+            "source_text": "No use throughout episode.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member's primary using peer group remains accessible at his prior high school.",
+            "source_text": "Primary using peer group remains accessible at prior school.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member reported that his prior high school is where he was truant for most of the spring semester.",
+            "source_text": "Member expressed anxiety about returning to his prior high school, where he reports that his primary using peer group remains and where he was truant for most of the spring semester.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician assessed relapse potential acuity as moderate.",
+            "source_text": "d5_relapse_potential: Moderate. Cravings reduced and stable. Primary using peer group remains accessible at prior school.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "dimension": "d6_recovery_environment",
+        "acuity": "high",
+        "assertions": [
+          {
+            "assertion": "Mother works overnight shifts four nights per week, leaving the member unsupervised during those hours.",
+            "source_text": "Mother disclosed she works overnight shifts four nights per week and that member is unsupervised during those hours.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The overnight supervision gap was newly disclosed on 2026-06-29 and had not been previously documented.",
+            "source_text": "This has not previously been documented.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Mother is exploring schedule changes with her employer to address supervision gaps, but the outcome is unknown.",
+            "source_text": "Mother is receptive and is exploring schedule changes with her employer, outcome unknown.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Stepfather has not attended any family therapy sessions.",
+            "source_text": "Stepfather has not attended.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has no confirmed educational placement and no confirmed daytime structure for the interval between discharge and the start of the school year.",
+            "source_text": "Member has no confirmed educational placement and no confirmed daytime structure for the interval between discharge and the start of the school year.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician assessed that a step-down would return the member to unsupervised evenings and unstructured days during the interval in which his primary using peer group remains accessible.",
+            "source_text": "A step-down would return the member to unsupervised evenings and unstructured days during the interval in which his primary using peer group remains accessible.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The clinician assessed recovery environment acuity as high.",
+            "source_text": "d6_recovery_environment: High. Unsupervised four nights weekly per guardian work schedule. No confirmed educational placement until mid-August.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ],
+    "goals": [
+      {
+        "goal_id": "G1",
+        "status": "partially_met",
+        "assertions": [
+          {
+            "assertion": "Member's craving intensity has decreased from 8/10 at intake to 4/10, meeting the intensity threshold of the goal.",
+            "source_text": "Craving intensity reduced from 8/10 at intake to 4/10, sustained twelve days.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Craving intensity at 4/10 has been sustained for twelve days as of 2026-07-06, which does not yet meet the goal's criterion of two consecutive weeks.",
+            "source_text": "Two-week sustained criterion not yet met.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member denied any substance use throughout the episode of care.",
+            "source_text": "No use throughout episode.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G2",
+        "status": "met",
+        "assertions": [
+          {
+            "assertion": "Member attended all scheduled group sessions during the period reviewed.",
+            "source_text": "Attendance complete, verbal contribution criterion met each week.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member met the verbal contribution criterion in group sessions each week during the period reviewed.",
+            "source_text": "Attendance complete, verbal contribution criterion met each week.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "On the week of 2026-06-25, member contributed verbally in four group sessions.",
+            "source_text": "Member has attended all scheduled groups this week and contributed verbally in four.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "The reassessment explicitly notes G2 as met for the current period.",
+            "source_text": "G2: met this period.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G3",
+        "status": "partially_met",
+        "assertions": [
+          {
+            "assertion": "Seven of the eight required family psychotherapy sessions have been completed as of the reassessment date.",
+            "source_text": "Seven of eight family sessions completed.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Stepfather has not attended any family therapy sessions, leaving one of the two guardians unengaged.",
+            "source_text": "Stepfather has not attended.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Mother practiced the de-escalation protocol introduced in session four and reported a better outcome than prior attempts.",
+            "source_text": "Mother reported using it once during a phone call and described the outcome as better than prior attempts.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": true
+          },
+          {
+            "assertion": "The newly disclosed overnight supervision gap represents an unresolved conflict escalation and supervision issue that the family sessions are intended to address.",
+            "source_text": "Mother disclosed she works overnight shifts four nights per week and that member is unsupervised during those hours. This has not previously been documented. Discussed supervision as a discharge planning issue.",
+            "confidence": 0.85,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      },
+      {
+        "goal_id": "G4",
+        "status": "not_met",
+        "assertions": [
+          {
+            "assertion": "The school district is considering a transfer to an alternative program, but no decision has been confirmed as of the reassessment.",
+            "source_text": "case management confirmed the district will consider a transfer to an alternative program, decision expected mid-August.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member has no confirmed educational placement as of the reassessment date.",
+            "source_text": "G4: not met. District transfer decision pending mid-August. No confirmed placement.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "No transition plan with the school district has been completed prior to discharge.",
+            "source_text": "G4: not met. District transfer decision pending mid-August. No confirmed placement.",
+            "confidence": 0.9,
+            "conflicting": false,
+            "unquantified": false
+          },
+          {
+            "assertion": "Member expressed anxiety about returning to his prior high school and asked whether a transfer to a different school was possible.",
+            "source_text": "Member expressed anxiety about returning to his prior high school, where he reports that his primary using peer group remains and where he was truant for most of the spring semester. Member asked whether a different school was possible.",
+            "confidence": 0.95,
+            "conflicting": false,
+            "unquantified": false
+          }
+        ]
+      }
+    ]
+  }
+]

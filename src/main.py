@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import anthropic
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, File, Request, UploadFile
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 
 from src.extraction import extract_evidence
@@ -52,7 +52,7 @@ _evidence_cache: dict = {}
 
 
 def _load_cases() -> list[dict]:
-    with open("cases-v1.json") as f:
+    with open("data/cases-v1.json") as f:
         return json.load(f)["cases"]
 
 
@@ -260,3 +260,85 @@ async def case_detail(request: Request, case_id: str):
             "rationale": score.rationale,
         },
     )
+
+
+@app.get("/upload", response_class=HTMLResponse)
+async def upload_page(request: Request):
+    return templates.TemplateResponse(request, "upload.html", {})
+
+
+@app.post("/upload", response_class=HTMLResponse)
+async def upload_case(request: Request, file: UploadFile = File(...)):
+    # Read and parse
+    content = await file.read()
+    try:
+        data = json.loads(content)
+    except json.JSONDecodeError as e:
+        return templates.TemplateResponse(
+            request, "upload.html", {"error": f"Invalid JSON: {e}"}
+        )
+
+    # Accept either a single case or {"cases": [...]}
+    if "cases" in data:
+        cases = data["cases"]
+    elif "case_id" in data:
+        cases = [data]
+    else:
+        return templates.TemplateResponse(
+            request,
+            "upload.html",
+            {"error": "JSON must contain a 'case_id' (single case) or 'cases' array."},
+        )
+
+    # Validate and process each case
+    client = anthropic.AsyncAnthropic()
+    errors = []
+
+    async def process_uploaded(case):
+        case_id = case.get("case_id", "unknown")
+        try:
+            episode = _build_episode(case)
+        except Exception as e:
+            errors.append(f"{case_id}: Invalid episode data — {e}")
+            return None
+
+        gate_results = [gate(episode) for gate in ALL_GATES]
+        has_fatal = any(
+            not g.passed and g.severity == Severity.FATAL for g in gate_results
+        )
+
+        evidence = None
+        if not has_fatal:
+            try:
+                evidence = await extract_evidence(case, client)
+            except Exception as e:
+                errors.append(f"{case_id}: Extraction failed — {e}")
+
+        result = score_case(case_id, gate_results, evidence)
+        action = _next_action(result, gate_results)
+        display = _display_decision(result, gate_results)
+
+        _results_cache[case_id] = {
+            "case": case,
+            "episode": episode,
+            "gate_results": gate_results,
+            "evidence": evidence,
+            "score": result,
+            "next_action": action,
+            "display_decision": display,
+        }
+        return case_id
+
+    tasks = [process_uploaded(case) for case in cases]
+    results = await asyncio.gather(*tasks)
+    processed = [r for r in results if r is not None]
+
+    if errors and not processed:
+        return templates.TemplateResponse(
+            request, "upload.html", {"error": "\n".join(errors)}
+        )
+
+    if len(processed) == 1:
+        return RedirectResponse(f"/case/{processed[0]}", status_code=303)
+
+    return RedirectResponse("/", status_code=303)

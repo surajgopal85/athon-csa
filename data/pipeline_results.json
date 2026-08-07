@@ -1,0 +1,108 @@
+[
+  {
+    "case_id": "CSA-001",
+    "age": 34,
+    "decision": "APPROVE",
+    "has_fatal_gate": false,
+    "credible_high_dims": [
+      "d5_relapse_potential",
+      "d6_recovery_environment"
+    ],
+    "rationale": [
+      "d5_relapse_potential: high acuity, avg confidence 0.93",
+      "d6_recovery_environment: high acuity, avg confidence 0.94"
+    ],
+    "gate_failures": []
+  },
+  {
+    "case_id": "CSA-002",
+    "age": 41,
+    "decision": "DENY_WITH_TRANSITION",
+    "has_fatal_gate": false,
+    "credible_high_dims": [],
+    "rationale": [
+      "No credible high-acuity dimension. Documentation supports orderly transition (UT-7-19-4-3-a, up to 14 calendar days)."
+    ],
+    "gate_failures": []
+  },
+  {
+    "case_id": "CSA-003",
+    "age": 29,
+    "decision": "DENY",
+    "has_fatal_gate": false,
+    "credible_high_dims": [],
+    "rationale": [
+      "Insufficient documentation: no goal has a determinable status (all unable_to_assess)."
+    ],
+    "gate_failures": []
+  },
+  {
+    "case_id": "CSA-004",
+    "age": 37,
+    "decision": "APPROVE",
+    "has_fatal_gate": false,
+    "credible_high_dims": [
+      "d3_emotional_behavioral",
+      "d5_relapse_potential",
+      "d6_recovery_environment"
+    ],
+    "rationale": [
+      "d3_emotional_behavioral: high acuity, avg confidence 0.92",
+      "d5_relapse_potential: high acuity, avg confidence 0.95",
+      "d6_recovery_environment: high acuity, avg confidence 0.94"
+    ],
+    "gate_failures": []
+  },
+  {
+    "case_id": "CSA-005",
+    "age": 45,
+    "decision": "DENY",
+    "has_fatal_gate": true,
+    "credible_high_dims": [],
+    "rationale": [
+      "Fatal procedural failure: Submission date 2026-06-29 is before the four-calendar-day window starting 2026-07-04. Continued-stay PA must be submitted no earlier than four calendar days of, and including, the first requested date of service. [UT-7-19-4-2-b]"
+    ],
+    "gate_failures": [
+      {
+        "gate": "submission_window",
+        "severity": "fatal",
+        "message": "Submission date 2026-06-29 is before the four-calendar-day window starting 2026-07-04. Continued-stay PA must be submitted no earlier than four calendar days of, and including, the first requested date of service."
+      }
+    ]
+  },
+  {
+    "case_id": "CSA-006",
+    "age": 31,
+    "decision": "APPROVE",
+    "has_fatal_gate": false,
+    "credible_high_dims": [
+      "d5_relapse_potential",
+      "d6_recovery_environment"
+    ],
+    "rationale": [
+      "d5_relapse_potential: high acuity, avg confidence 0.91",
+      "d6_recovery_environment: high acuity, avg confidence 0.95"
+    ],
+    "gate_failures": []
+  },
+  {
+    "case_id": "CSA-007",
+    "age": 16,
+    "decision": "APPROVE",
+    "has_fatal_gate": false,
+    "credible_high_dims": [
+      "d6_recovery_environment"
+    ],
+    "rationale": [
+      "Correctable: Requested 45 days for adolescent (age 12-18) member (age 16). Maximum is 30 calendar days per request. Fix: Resubmit with 30 days or fewer. [UT-7-19-4-a]",
+      "d6_recovery_environment: high acuity, avg confidence 0.92"
+    ],
+    "gate_failures": [
+      {
+        "gate": "pa_duration_cap",
+        "severity": "correctable",
+        "message": "Requested 45 days for adolescent (age 12-18) member (age 16). Maximum is 30 calendar days per request."
+      }
+    ]
+  }
+]

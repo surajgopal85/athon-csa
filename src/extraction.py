@@ -163,10 +163,25 @@ async def extract_evidence(case: dict, client) -> ExtractedEvidence:
 
     message = await client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=4096,
+        max_tokens=8192,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
 
     raw_json = message.content[0].text
+
+    # If the response was truncated (hit max_tokens), retry with a
+    # shorter source_text instruction to reduce output size
+    if message.stop_reason == "max_tokens":
+        retry_msg = await client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=8192,
+            system=SYSTEM_PROMPT + (
+                "\n\nIMPORTANT: Keep source_text quotes under 80 characters. "
+                "Truncate long quotes with '...' to stay within output limits."
+            ),
+            messages=[{"role": "user", "content": user_prompt}],
+        )
+        raw_json = retry_msg.content[0].text
+
     return ExtractedEvidence.model_validate_json(raw_json)
