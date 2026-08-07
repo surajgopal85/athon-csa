@@ -52,7 +52,7 @@ _evidence_cache: dict = {}
 
 
 def _load_cases() -> list[dict]:
-    with open("cases-v1.json") as f:
+    with open("data/cases-v1.json") as f:
         return json.load(f)["cases"]
 
 
