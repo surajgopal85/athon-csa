@@ -118,7 +118,7 @@ The confidence floor exists because a reassessment can claim "D5: High" in one w
 
 ### Blind comparison against answer key (7 cases)
 
-I built my own predictions independently, then compared with Claude's. 6 of 7 matched on the first run.
+First, I took synthetic, LLM generated scenarios and reasoned through my own recommendations after reading Utah's guidelines. I then built the recommendation engine, which generated highly similar recommendations to my own. Finally, I compared with Claude's own hidden answers. 6 of 7 matched on the first run.
 
 | Case | Engine | Key | Notes |
 |------|--------|-----|-------|
